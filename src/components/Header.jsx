@@ -36,7 +36,7 @@ export default function Header() {
         <div className="flex items-center justify-center gap-3">
           {/* Toggle Dark/Light */}
           <div onClick={() => setIsDark((prev) => !prev)}>
-            <IconButton>
+            <IconButton tooltip={isDark ? "Light Mode" : "Dark Mode"}>
               {isDark ? (
                 <Sun className="size-5 hover:text-white text-gray-300 transition-colors duration-100" />
               ) : (
@@ -47,7 +47,7 @@ export default function Header() {
 
           {/* Change Language */}
           <div>
-            <IconButton>
+            <IconButton tooltip="Switch Language">
               <span className="hover:text-white text-gray-300 transition-colors duration-100">
                 EN
               </span>
