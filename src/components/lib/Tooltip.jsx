@@ -2,6 +2,9 @@ import React from "react";
 import * as RadixTooltip from "@radix-ui/react-tooltip";
 
 export default function Tooltip({ content, children, side = "top", delay = 50 }) {
+  // Don’t render tooltip if no content
+  if (!content) return children;
+
   return (
     <RadixTooltip.Provider>
       <RadixTooltip.Root delayDuration={delay}>
@@ -11,10 +14,13 @@ export default function Tooltip({ content, children, side = "top", delay = 50 })
         <RadixTooltip.Content
           side={side}
           sideOffset={5}
-          className="bg-black text-white text-sm px-3 py-1 rounded shadow-lg animate-fadeIn"
+          className="rounded-md px-3 py-1 text-xs shadow-md
+                     bg-zinc-100 text-black
+                     dark:bg-black dark:text-white
+                     animate-fadeIn"
         >
           {content}
-          <RadixTooltip.Arrow className="fill-black" />
+          <RadixTooltip.Arrow className="fill-zinc-200 dark:fill-black" />
         </RadixTooltip.Content>
       </RadixTooltip.Root>
     </RadixTooltip.Provider>

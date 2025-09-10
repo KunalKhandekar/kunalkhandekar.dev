@@ -1,29 +1,25 @@
-"use client";
-
-import { Moon, Sun } from "lucide-react";
-import { useState } from "react";
 import { BsSlashSquare } from "react-icons/bs";
-import { IoIosSearch } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
+import { IoIosSearch } from "react-icons/io";
 import Avatar from "./lib/Avatar";
 import Button from "./lib/Button";
 import IconButton from "./lib/IconButton";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
-  const [isDark, setIsDark] = useState(true);
   return (
-    <div className="flex items-center justify-between gap-2 w-min-full p-3">
+    <div className="flex items-center justify-between gap-2 w-min-full p-3 bg-white text-zinc-700 dark:text-white dark:bg-black">
       <div className="flex items-center justify-center gap-2 ">
         {/* Logo */}
         <Avatar url={"https://github.com/evilrabbit.png"} />
 
         {/* Name */}
-        <Button content="KunalKhandekar" type="ghost" />
+        <Button content="Kunal Khandekar" type="ghost" />
       </div>
       <div className="flex items-center justify-center gap-4">
         {/* Search Bar */}
         <div
-          className={`pr-20 p-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer border border-zinc-600 text-zinc-300`}
+          className={`pr-20 p-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer border-zinc-300 border dark:border-zinc-600  text-zinc-700 dark:text-white select-none`}
         >
           <IoIosSearch className="size-5 mr-2" />
           <span className="flex justify-center items-center">
@@ -31,26 +27,15 @@ export default function Header() {
           </span>
         </div>
 
-        <div className="max-md:hidden w-px h-[25px] border border-zinc-800"></div>
+        <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300"></div>
 
         <div className="flex items-center justify-center gap-3">
           {/* Toggle Dark/Light */}
-          <div onClick={() => setIsDark((prev) => !prev)}>
-            <IconButton tooltip={isDark ? "Light Mode" : "Dark Mode"}>
-              {isDark ? (
-                <Sun className="size-5 hover:text-white text-gray-300 transition-colors duration-100" />
-              ) : (
-                <Moon className="size-5 hover:text-white text-gray-300 transition-colors duration-100" />
-              )}
-            </IconButton>
-          </div>
-
+          <ThemeToggle />
           {/* Change Language */}
           <div>
             <IconButton tooltip="Switch Language">
-              <span className="hover:text-white text-gray-300 transition-colors duration-100">
-                EN
-              </span>
+              <span className="transition-colors duration-100">EN</span>
               {/* <span>MA</span> */}
               {/* <span>HI</span> */}
             </IconButton>
@@ -62,7 +47,7 @@ export default function Header() {
               content={
                 <div className="flex gap-1 justify-center items-center group">
                   <Avatar url={"https://github.com/leerob.png"} />
-                  <CiMenuFries className="size-6 text-gray-500 group-hover:text-white transition-colors duration-300" />
+                  <CiMenuFries className="size-6 dark:text-gray-500 dark:group-hover:text-white text-zinc-400 group-hover:text-zinc-700  transition-colors duration-100" />
                 </div>
               }
               type="ghost"

@@ -8,6 +8,7 @@ function Avatar({ url }) {
         src={url}
         width="100"
         height="100"
+        className=""
       />
     </div>
   );
