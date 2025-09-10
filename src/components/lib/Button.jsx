@@ -1,6 +1,6 @@
 import Tooltip from "./Tooltip";
 
-export default function Button({ content, type = "outline", tooltip = null }) {
+export default function Button({ content, type = "outline", tooltip = null, classes='' }) {
   const buttonTypes = {
     outline: "border border-zinc-600",
     ghost: "",
@@ -9,7 +9,7 @@ export default function Button({ content, type = "outline", tooltip = null }) {
   return (
     <Tooltip content={tooltip}>
       <div
-        className={`px-2.5 py-0.5 flex items-center justify-center rounded-md text-sm cursor-pointer ${buttonTypes[type]} dark:hover:bg-zinc-900 hover:bg-zinc-100 text-zinc-700 dark:text-white`}
+        className={`px-2.5 py-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer ${buttonTypes[type]} dark:hover:bg-zinc-900 hover:bg-zinc-100 text-zinc-700 dark:text-white ${classes}`}
       >
         {content}
       </div>

@@ -1,7 +1,6 @@
-import React from 'react'
 
-export default function page() {
+export default function Home() {
   return (
-    <div  className='dark:bg-amber-500 bg-amber-950 transition-colors duration-100'>Home</div>
+    <div>Home</div>
   )
 }
