@@ -1,10 +1,11 @@
-import ProfileBar from '../components/ProfileBar'
-
+import ProfileBar from "../components/ProfileBar";
 export default function OverviewPage() {
   return (
-    <div className='p-6 flex gap-2 dark:bg-[#0D1117] bg-white'>
+    <div className="max-w-7xl m-auto p-6 flex gap-2 max-[800px]:flex-col">
         <ProfileBar />
-        <div className='border-zinc-300 border dark:border-zinc-600 flex-3 rounded-lg p-2'>OverviewReadme</div>
-    </div>
-  )
+        <div className="border-zinc-300 border dark:border-zinc-600 flex-3 rounded-lg p-2">
+          OverviewReadme
+        </div>
+      </div>
+  );
 }

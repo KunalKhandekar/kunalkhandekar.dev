@@ -8,19 +8,19 @@ export default function ProfileBar() {
   return (
     <div className="flex-1">
       {/* Profile Bar */}
-      <div className="flex flex-col justify-center items-center p-3 pr-4 w-full">
-        <Avatar url={"/profile.jpg"} size="size-72" />
+      <div className="flex flex-col justify-center items-center p-3 pr-4 w-full max-[800px]:flex-row max-[800px]:gap-3 max-[800px]:p-0 max-[800px]:justify-start">
+        <Avatar url={"/profile.jpg"} size="size-72 max-[980px]:size-60 max-[800px]:size-24" />
 
         {/* Name & Bio */}
-        <div className="pt-4">
+        <div className="pt-4 max-[800px]:pt-0">
           <div className="flex flex-col justify-center">
-            <h3 className="font-semibold text-2xl">Sahil Khandekar</h3>
-            <span className="font-thin text-lg dark:text-zinc-200 text-zinc-950">
+            <h3 className="font-semibold text-2xl max-[980px]:text-xl max-[800px]:text-lg">Sahil Khandekar</h3>
+            <span className="font-thin text-lg max-[980px]:text-md max-[800px]:text-sm dark:text-zinc-200 text-zinc-950">
               Full Stack Developer
             </span>
           </div>
 
-          <div className="py-3 border-b dark:border-zinc-800 border-zinc-300 text-md">
+          <div className="py-3 max-[800px]:hidden border-b dark:border-zinc-800 border-zinc-300 text-md max-[980px]:text-sm">
             <p>
               👋 Hello there, fellow tech enthusiasts and curious minds! 🚀, I'm
               Sahil (Kunal), a student with a deep passion for coding and all
@@ -29,7 +29,7 @@ export default function ProfileBar() {
           </div>
         </div>
 
-        <div className="py-3 border-b dark:border-zinc-800 border-zinc-300 w-full text-sm flex flex-col justify-center items-start gap-2">
+        <div className="py-3 border-b max-[800px]:hidden dark:border-zinc-800 border-zinc-300 w-full text-sm flex flex-col justify-center items-start gap-2">
           <div className="flex justify-center items-center gap-1">
             <MdOutlineLocationOn className="size-4" />
             Mumbai, India
@@ -37,6 +37,14 @@ export default function ProfileBar() {
           <SocialLinks />
         </div>
       </div>
+
+      <div className="py-3 max-[800px]:block hidden border-b dark:border-zinc-800 border-zinc-300 text-md max-[980px]:text-sm">
+            <p>
+              👋 Hello there, fellow tech enthusiasts and curious minds! 🚀, I'm
+              Sahil (Kunal), a student with a deep passion for coding and all
+              things tech-related.
+            </p>
+          </div>
     </div>
   );
 }

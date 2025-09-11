@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased max-w-7xl m-auto`}>
+      <body className={`antialiased dark:bg-[#0D1117] bg-white`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           {children}

@@ -9,7 +9,7 @@ import Navbar from "./Navbar";
 
 export default function Header() {
   return (
-    <div className="flex flex-col gap-2 w-min-full p-3 pb-0 bg-[#F6F8FA] text-zinc-700 dark:text-white dark:bg-[#010409]">
+    <div className="flex flex-col gap-2 w-min-full p-3 pb-0 bg-[#F6F8FA] text-zinc-700 dark:text-white dark:bg-[#010409] border-b border-zinc-300 dark:border-zinc-600">
       <div className="flex items-center justify-between gap-2 ">
         <div className="flex items-center justify-center gap-2 ">
           {/* Logo */}

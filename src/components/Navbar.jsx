@@ -43,7 +43,7 @@ export default function Navbar() {
 
   return (
     <nav className="">
-      <ul className="flex items-center justify-items-start gap-2.5 border-b border-zinc-300 dark:border-zinc-600">
+      <ul className="flex items-center justify-items-start gap-2.5">
         {topics.map(({ name, icon, path }) => {
           const isActive = pathname === path;
           return (
