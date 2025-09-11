@@ -29,16 +29,16 @@ export default function Navbar() {
       icon: <LuFileBadge className="size-4" />,
       path: "/education",
     },
-    {
-      name: "achievements",
-      icon: <GoRepoForked className="size-4" />,
-      path: "/achievements",
-    },
-    {
-      name: "experience",
-      icon: <MdOutlineBadge className="size-4" />,
-      path: "/experience",
-    },
+    // {
+    //   name: "achievements",
+    //   icon: <GoRepoForked className="size-4" />,
+    //   path: "/achievements",
+    // },
+    // {
+    //   name: "experience",
+    //   icon: <MdOutlineBadge className="size-4" />,
+    //   path: "/experience",
+    // },
   ];
 
   return (

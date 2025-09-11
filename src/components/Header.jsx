@@ -19,23 +19,23 @@ export default function Header() {
           <Button
             content="KunalKhandekar"
             type="ghost"
-            classes="font-semibold"
+            classes="font-semibold max-[400px]:hidden"
           />
         </div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-4 max-[700px]:gap-1.5">
           {/* Search Bar */}
           <div
-            className={`pr-20 p-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer border-zinc-300 border dark:border-zinc-600  text-zinc-700 dark:text-white select-none`}
+            className={`pr-20 max-[700px]:pr-0 p-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer border-zinc-300 border dark:border-zinc-600  text-zinc-700 dark:text-white select-none`}
           >
             <IoIosSearch className="size-5 mr-2" />
-            <span className="flex justify-center items-center">
+            <span className="flex justify-center items-center max-[700px]:hidden">
               Type <BsSlashSquare className="mx-2" /> to search
             </span>
           </div>
 
           <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300"></div>
 
-          <div className="flex items-center justify-center gap-3">
+          <div className="flex items-center justify-center gap-3 max-[700px]:gap-1.5">
             {/* Toggle Dark/Light */}
             <ThemeToggle />
             {/* Change Language */}
