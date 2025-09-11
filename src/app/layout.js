@@ -1,12 +1,6 @@
-import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { Inter } from "next/font/google";
 import Header from "../components/Header.jsx";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-github",
-});
+import "./globals.css";
 
 export const metadata = {
   title: "Sahil Khandekar",
@@ -15,7 +9,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className={inter.variable}>
+    <html lang="en" suppressHydrationWarning>
       <body className={`antialiased max-w-7xl m-auto`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />

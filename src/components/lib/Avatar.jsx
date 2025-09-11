@@ -1,14 +1,16 @@
 import Image from "next/image";
 
-function Avatar({ url }) {
+function Avatar({ url, size='size-9' }) {
   return (
-    <div className="size-9 rounded-full overflow-hidden cursor-pointer">
+    <div
+      className={`${size} rounded-full overflow-hidden cursor-pointer`}
+    >
       <Image
         alt="Logo"
         src={url}
-        width="100"
-        height="100"
-        className=""
+        width={100}
+        height={100}
+        className="object-cover w-full h-full"
       />
     </div>
   );

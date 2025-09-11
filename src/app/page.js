@@ -1,6 +1,7 @@
+import OverviewPage from "../pages/OverviewPage";
 
 export default function Home() {
   return (
-    <div>Home</div>
+    <OverviewPage />
   )
 }

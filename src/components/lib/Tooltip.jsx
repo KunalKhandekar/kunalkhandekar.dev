@@ -1,10 +1,8 @@
 import React from "react";
 import * as RadixTooltip from "@radix-ui/react-tooltip";
 
-export default function Tooltip({ content, children, side = "top", delay = 50 }) {
-  // Don’t render tooltip if no content
+export default function Tooltip({ content, children, side = "top", delay = 0 }) {
   if (!content) return children;
-
   return (
     <RadixTooltip.Provider>
       <RadixTooltip.Root delayDuration={delay}>
