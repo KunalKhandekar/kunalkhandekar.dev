@@ -24,7 +24,7 @@ export default function ReadmeRenderer({ content }) {
   }
 
   return (
-    <div className="flex justify-center py-8">
+    <div className="flex justify-center py-4">
       <ShadowDOM.div>
         <link
           rel="stylesheet"

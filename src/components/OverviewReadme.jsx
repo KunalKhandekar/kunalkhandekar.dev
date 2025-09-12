@@ -64,7 +64,7 @@ export default function OverviewReadme() {
 `;
 
   return (
-    <div className="prose dark:prose-invert max-w-none p-2 h-full">
+    <div className="prose dark:prose-invert max-w-none h-full">
       <ReadmeRenderer content={markdown} />
     </div>
   );
