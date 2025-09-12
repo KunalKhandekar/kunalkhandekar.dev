@@ -16,7 +16,7 @@ export default function ThemeToggle() {
   if (!mounted) {
     return (
       <IconButton disabled={true}>
-        <div className="size-5 rounded-full dark:bg-zinc-600 bg-zinc-800 animate-pulse" />
+        <div className="size-5 rounded-full animate-none bg-gray-200 dark:bg-gray-700" />
       </IconButton>
     );
   }

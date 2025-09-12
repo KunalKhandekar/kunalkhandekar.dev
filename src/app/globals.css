@@ -1,15 +1,12 @@
 @import "tailwindcss";
 
-/* Define the dark variant */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Default (light mode) */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-/* Dark mode overrides */
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
@@ -18,13 +15,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
-  /* GitHub's font stacks */
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
+    Consolas, "Courier New", monospace;
 }
 
-/* Set GitHub fonts as default */
 body {
   font-family: var(--font-family-sans);
-}
+} 

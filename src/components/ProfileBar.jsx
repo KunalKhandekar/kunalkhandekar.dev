@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function ProfileBar() {
   return (
-    <div className="flex-1">
+    <div className="flex-1 max-[800px]:p-4 max-[800px]:dark:bg-[#0D1117] max-[800px]:bg-white max-[800px]:border-zinc-300 max-[800px]:border-b max-[800px]:dark:border-zinc-800">
       {/* Profile Bar */}
       <div className="flex flex-col justify-center items-center p-3 pr-4 w-full max-[800px]:flex-row max-[800px]:gap-3 max-[800px]:p-0 max-[800px]:justify-start">
         <Avatar url={"/profile.jpg"} size="size-72 max-[980px]:size-60 max-[800px]:size-24" />
@@ -38,7 +38,7 @@ export default function ProfileBar() {
         </div>
       </div>
 
-      <div className="py-3 max-[800px]:block hidden border-b dark:border-zinc-800 border-zinc-300 text-md max-[980px]:text-sm">
+      <div className="py-3 max-[800px]:block hidden text-md max-[980px]:text-sm ">
             <p>
               👋 Hello there, fellow tech enthusiasts and curious minds! 🚀, I'm
               Sahil (Kunal), a student with a deep passion for coding and all
