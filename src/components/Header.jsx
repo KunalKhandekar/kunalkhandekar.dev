@@ -6,6 +6,7 @@ import Button from "./lib/Button";
 import IconButton from "./lib/IconButton";
 import ThemeToggle from "./ThemeToggle";
 import Navbar from "./Navbar";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
   return (
@@ -49,15 +50,17 @@ export default function Header() {
 
             {/* Side Bar */}
             <div className="flex gap-2">
-              <Button
-                content={
-                  <div className="flex gap-1 justify-center items-center group">
-                    <Avatar url={"/profile.jpg"} />
-                    <CiMenuFries className="size-6 dark:text-gray-500 dark:group-hover:text-white text-zinc-400 group-hover:text-zinc-700  transition-colors duration-100" />
-                  </div>
-                }
-                type="ghost"
-              ></Button>
+              <Sidebar>
+                <Button
+                  content={
+                    <div className="flex gap-1 justify-center items-center group">
+                      <Avatar url={"/profile.jpg"} />
+                      <CiMenuFries className="size-6 dark:text-gray-500 dark:group-hover:text-white text-zinc-400 group-hover:text-zinc-700  transition-colors duration-100" />
+                    </div>
+                  }
+                  type="ghost"
+                ></Button>
+              </Sidebar>
             </div>
           </div>
         </div>

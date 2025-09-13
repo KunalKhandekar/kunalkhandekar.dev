@@ -29,7 +29,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "src/components/lib/utils.js"  ],
   "exclude": [
     "node_modules"
   ]

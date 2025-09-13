@@ -50,7 +50,7 @@ export default function ProfileBar() {
 }
 
 
-function SocialLinks() {
+export function SocialLinks() {
   const socials = [
     {
       name: "Email",
@@ -92,7 +92,7 @@ function SocialLinks() {
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex justify-center items-center gap-1  cursor-pointer"
+          className="flex items-center gap-1  cursor-pointer"
         >
           {social.icon}
           <p className="hover:text-blue-400">{social.userName}</p>

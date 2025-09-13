@@ -15,11 +15,7 @@ import {
 } from "../components/lib/Popover";
 import Button from "./lib/Button";
 
-export default function Navbar() {
-  const pathname = usePathname();
-  const [open, setOpen] = useState(false);
-
-  const topics = [
+export const topics = [
     {
       name: "overview",
       icon: <IoBookOutline className="size-4" />,
@@ -56,6 +52,10 @@ export default function Navbar() {
       blockAt: "max-[700px]:block",
     },
   ];
+
+export default function Navbar() {
+  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className="w-full flex items-center justify-between">
