@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import ReadmeRenderer from "./ReadmeRenderer";
 
@@ -45,27 +45,18 @@ export default function OverviewReadme() {
 ---
 
 ## 📊 GitHub Stats  
-![](https://github-readme-stats.vercel.app/api?username=KunalKhandekar&theme=radical&show_icons=true&hide_border=false&include_all_commits=true&count_private=true)  
-![](https://github-readme-streak-stats.herokuapp.com/?user=KunalKhandekar&theme=radical&hide_border=false)  
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=KunalKhandekar&theme=radical&hide_border=false&layout=compact)
-
----
-
-## 🏆 GitHub Achievements  
-![](https://github-profile-trophy.vercel.app/?username=KunalKhandekar&theme=radical&no-frame=true&no-bg=false&margin-w=4)
-
----
-## ✍️ Quote of the Day  
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
----
-
-## 🔝 Top Contributed Repositories  
-![](https://github-contributor-stats.vercel.app/api?username=KunalKhandekar&limit=5&theme=radical&combine_all_yearly_contributions=true)
+![](https://github-readme-streak-stats.herokuapp.com/?user=KunalKhandekar&theme=radical&hide_border=false)
 `;
 
   return (
-    <div className="prose dark:prose-invert max-w-none h-full">
-      <ReadmeRenderer content={markdown} />
+    <div className="border-zinc-300 max-[800px]:rounded-none rounded-lg border dark:border-zinc-600 max-[800px]:border-zinc-300 max-[800px]:border-t max-[800px]:border-b max-[800px]:dark:border-zinc-800  p-6 dark:bg-[#0D1117] bg-white max-[800px]:border-l-0 max-[800px]:border-r-0">
+      <p className="text-xs font-mono text-shadow-initial pb-3">
+        KunalKhandekar<span className="px-0.5 text-gray-400">/</span>README
+        <span className="text-gray-400">.md</span>
+      </p>
+      <div className="prose dark:prose-invert max-w-none h-full">
+        <ReadmeRenderer content={markdown} />
+      </div>
     </div>
   );
 }
