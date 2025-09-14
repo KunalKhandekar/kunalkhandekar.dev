@@ -1,51 +1,64 @@
-// "use client";
-
 import ReadmeRenderer from "./ReadmeRenderer";
 
 export default function OverviewReadme() {
-  const markdown = `<h1 align="center">Hi 👋, I'm Sahil Khandekar</h1>
-<h3 align="center">Full Stack Developer | MERN | Next.js | Open Source Enthusiast</h3>
+  const markdown = `
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=435&lines=Full-Stack+Developer;MERN+Stack+Enthusiast;Open+Source+Contributor;Student+%7C+Mumbai%2C+India" alt="Typing SVG" />
+</div>
+
+## 👋 Welcome to My Digital Space
+
+Hey there! I'm **Sahil Khandekar**, a passionate full-stack developer and student from Mumbai, India. This portfolio showcases my journey in web development, featuring projects built with modern technologies and a deep love for creating user-friendly solutions.
+
+Currently pursuing **BSc. in Information Technology** at University of Mumbai while mastering the **MERN stack** through hands-on projects and continuous learning. I believe in learning by building, and this portfolio is a testament to that philosophy.
+
+## 💻 Tech Skills
+
+### **Frontend Technologies**
+- **React.js** & **Next.js** - Building dynamic, server-side rendered applications
+- **JavaScript** (ES6+) - Modern JavaScript for interactive experiences  
+- **TailwindCSS** - Utility-first CSS framework for rapid UI development
+- **Redux** & **React Router** - State management and routing solutions
+- **HTML5** & **CSS3** - Semantic markup and responsive design
+
+### **Backend Technologies**
+- **Node.js** & **Express.js** - Server-side JavaScript development
+- **MongoDB** - NoSQL database for scalable applications
+- **JWT** - Secure authentication and authorization
+- **Socket.io** - Real-time communication features
+
+### **Tools & Deployment**
+- **Git** & **GitHub** - Version control and collaboration
+- **Postman** - API testing and development
+- **Netlify** & **GitHub Pages** - Static site deployment
+- **Vite** - Fast build tool for modern web projects
+
+
+## 🌟 Current Focus
+
+Building **Storage App** - a comprehensive cloud file storage application that demonstrates advanced MERN stack capabilities, including file upload, user authentication, and real-time features.
 
 ---
 
-## 💫 About Me
-- 🎓 Passionate **Full Stack Developer** and student from **Mumbai, India**  
-- 🌱 Currently exploring **Backend Development (MERN + Next.js)**  
-- 💡 Interested in **Web Development, Open Source, and Scalable Systems**  
-- 📫 Reach me at **kunalkhandekar.dev@gmail.com**  
+<div align="center">
+  
+## 🚀 Let's Build Something Amazing Together!
+
+Whether you're looking for a developer to bring your ideas to life, want to collaborate on exciting projects, or just want to chat about technology - I'm always excited to connect!
+
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-Visit_My_Website-FF6B6B?style=for-the-badge&logoColor=white)](https://kunalkhandekar.dev)
+[![Email](https://img.shields.io/badge/📧_Email-Let's_Connect-4ECDC4?style=for-the-badge&logoColor=white)](mailto:kunalkhandekar.dev@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/💼_LinkedIn-Professional_Network-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sahil-khandekar-dev)
+[![GitHub](https://img.shields.io/badge/👨‍💻_GitHub-View_Projects-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/KunalKhandekar)
+
+</div>
 
 ---
 
-## 🌐 Connect with Me  
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000.svg?logo=vercel&logoColor=white)](https://kunalkhandekar.dev) 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/khandekarsahil) 
-[![Twitter](https://img.shields.io/badge/Twitter-%23000000.svg?logo=X&logoColor=white)](https://x.com/_kunalkhandekar) 
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/kunalkhandekar.dev) 
-
----
-
-## 🛠️ Tech Stack  
-![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) 
-![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) 
-![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) 
-![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
-![Redux](https://img.shields.io/badge/Redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) 
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
-![Express.js](https://img.shields.io/badge/Express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=white) 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) 
-![Socket.io](https://img.shields.io/badge/Socket.io-black?style=for-the-badge&logo=socket.io) 
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens) 
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) 
-![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) 
-![GitHub](https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-
----
-
-## 📊 GitHub Stats  
-![](https://github-readme-streak-stats.herokuapp.com/?user=KunalKhandekar&theme=radical&hide_border=false)
+<div align="center">
+  <p><em>"Code is like humor. When you have to explain it, it's bad."</em></p>
+  <p>💜 Built with passion in Mumbai, India</p>
+</div>
 `;
 
   return (
