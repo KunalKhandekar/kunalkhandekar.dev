@@ -18,7 +18,7 @@ export default function Header() {
 
           {/* Name */}
           <Button
-            content="KunalKhandekar"
+            content="SahilKhandekar"
             type="ghost"
             classes="font-semibold max-[400px]:hidden"
           />
