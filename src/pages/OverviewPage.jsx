@@ -1,6 +1,7 @@
 import PinnedRespositories from "../components/PinnedRespositories";
 import OverviewReadme from "../components/OverviewReadme";
 import ProfileBar from "../components/ProfileBar";
+import ContributionChart from "../components/ContributionChart";
 
 export default function OverviewPage() {
   return (
@@ -9,6 +10,7 @@ export default function OverviewPage() {
       <div className="flex-3 max-w-4xl">
         <OverviewReadme />
         <PinnedRespositories />
+        <ContributionChart />
       </div>
     </div>
   );
