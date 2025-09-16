@@ -475,20 +475,19 @@ export default function ContributionChart() {
 
   return (
     <div className="w-full space-y-4 dark:bg-[#0D1117] bg-white max-[800px]:border dark:border-zinc-800 border-zinc-300 max-[800px]:border-x-0">
-      <div className="max-[800px]:p-2">
-        <div className="max-[800px]:mb-2 mb-4">
-          <h2 className="text-foreground max-[800px]:text-md max-[800px]:px-4">Type below to generate a personalised graph</h2>
+      <div className="max-[800px]:p-4">
+        <div className="mt-2 mb-4">
+          <h2 className="text-foreground">Type below to generate a personalised graph</h2>
         </div>
 
-        <div className="space-y-4 max-[800px]:p-4">
+        <div className="space-y-4">
           <div className="flex justify-between items-center">
             <div className="space-y-2 flex-1">
-              <textarea
+              <input
                 value={inputText}
                 onChange={handleInputChange}
                 placeholder="Type your message (letters, numbers only)..."
-                className="border border-zinc-300 dark:border-zinc-600  text-foreground font-mono text-lg resize-none w-full p-2 rounded-md focus:outline-0"
-                rows={1}
+                className="border border-zinc-300 dark:border-zinc-600  text-foreground resize-none w-full p-2 rounded-md focus:outline-0"
                 maxLength={maxChars}
               />
               <div className="flex justify-between items-center">
