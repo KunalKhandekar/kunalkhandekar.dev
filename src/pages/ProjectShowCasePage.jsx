@@ -25,7 +25,7 @@ export default function ProjectShowCasePage({ projectName }) {
         <div className="flex items-center justify-center gap-2">
           <Avatar url={"/profile.jpg"} />
           <h2 className="font-bold text-xl max-[800]:text-lg">
-            {projectName.replaceAll("-", " ")}{" "}
+            {projectName?.replaceAll("-", " ")}{" "}
           </h2>
           <Publicbadge />
         </div>
