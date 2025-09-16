@@ -7,8 +7,8 @@ export const ProjectAboutSection = () => {
     { name: "CSS", percent: 3.8, color: "bg-purple-700" },
   ];
   return (
-    <section className="flex-2 space-y-4 px-4">
-      <h2 className="font-semibold  ">About</h2>
+    <section className="flex-2 space-y-4 px-4 dark:bg-[#0D1117] bg-white max-[800px]:border dark:border-zinc-800 border-zinc-300 max-[800px]:border-x-0 max-[800px]:py-4">
+      <h2 className="font-semibold">About</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
         doloremque tempora velit impedit commodi quas officia ut culpa est

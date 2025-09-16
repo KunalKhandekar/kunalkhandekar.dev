@@ -1,15 +1,13 @@
 "use client";
 
 import { Activity, Info, Moon, Sun, X } from "lucide-react";
+import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import Button from "./lib/Button";
-import { SocialLinks } from "./ProfileBar";
-import { topics } from "./Navbar";
-import { useTheme } from "next-themes";
-import Image from "next/image";
 import Avatar from "./lib/Avatar";
+import { topics } from "./Navbar";
+import { SocialLinks } from "./ProfileBar";
 
 export default function Sidebar({ children }) {
   const pathname = usePathname();
