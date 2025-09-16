@@ -10,6 +10,7 @@ import IconButton from "./lib/IconButton";
 import { useMemo, useState } from "react";
 import LanguageSelect from "./LanguageSelect";
 import React from "react";
+import Image from "next/image";
 
 export default function ProjectSection() {
   const [view, setView] = useState("list");
@@ -19,6 +20,7 @@ export default function ProjectSection() {
   const projects = [
     {
       title: "talkAtive",
+      navLink: "talkAtive",
       description:
         "TalkAtive is a dynamic real-time chat application built with the MERN stack, empowering users to connect and engage in seamless conversations. It offers a user-friendly interface, secure authentication, robust chat functionality, and real-time messaging through WebSockets.",
       stack: "MERN",
@@ -38,6 +40,7 @@ export default function ProjectSection() {
     },
     {
       title: "EcoTracker",
+      navLink: "EcoTracker",
       description:
         "A comprehensive carbon footprint tracking application that helps users monitor their daily environmental impact. Built with React and Node.js, featuring interactive charts, goal setting, and personalized recommendations for sustainable living.",
       stack: "React, Node.js",
@@ -49,6 +52,7 @@ export default function ProjectSection() {
     },
     {
       title: "TaskFlow Pro",
+      navLink: "TaskFlow-Pro",
       description:
         "An advanced project management tool designed for teams to collaborate efficiently. Features include kanban boards, time tracking, file sharing, and real-time notifications. Built with Next.js, TypeScript, and PostgreSQL for optimal performance.",
       stack: "Next.js, TypeScript",
@@ -60,6 +64,7 @@ export default function ProjectSection() {
     },
     {
       title: "CryptoWatch",
+      navLink: "CryptoWatch",
       description:
         "A real-time cryptocurrency portfolio tracker with advanced analytics and price alerts. Integrates with multiple exchanges, provides market insights, and offers automated trading suggestions. Built with Vue.js and Express.js.",
       stack: "Vue.js, Express",
@@ -71,6 +76,7 @@ export default function ProjectSection() {
     },
     {
       title: "FitnessPal",
+      navLink: "FitnessPal",
       description:
         "A comprehensive fitness tracking application that monitors workouts, nutrition, and health metrics. Features AI-powered workout recommendations, meal planning, and progress visualization. Developed using React Native and Firebase.",
       stack: "React Native",
@@ -82,6 +88,7 @@ export default function ProjectSection() {
     },
     {
       title: "CodeShare",
+      navLink: "CodeShare",
       description:
         "A collaborative code editor platform where developers can share, review, and collaborate on code snippets in real-time. Supports multiple programming languages with syntax highlighting and version control integration.",
       stack: "Angular, Socket.io",
@@ -220,7 +227,7 @@ const ListLayout = ({ filteredRepos }) => {
           {/* Header */}
           <div className="flex gap-3 justify-start items-center">
             <Link
-              href={"/"}
+              href={`/projects/${item.navLink}`}
               className="font-semibold text-xl line-clamp-1 hover:underline text-blue-400"
             >
               {item.title}
@@ -285,9 +292,11 @@ const GridLayout = ({ filteredRepos }) => {
         >
           {/* Project Image */}
           <div className="aspect-video bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
-            <img
+            <Image
               src={item.image}
               alt={item.title}
+              width={100}
+              height={100}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
             />
           </div>
@@ -297,7 +306,7 @@ const GridLayout = ({ filteredRepos }) => {
             {/* Header */}
             <div className="flex gap-3 justify-start items-center mb-3">
               <Link
-                href={"/"}
+                href={`/projects/${item.navLink}`}
                 className="font-semibold text-lg line-clamp-1 hover:underline text-blue-400"
               >
                 {item.title}
