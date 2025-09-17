@@ -337,7 +337,7 @@ const GridLayout = ({ filteredRepos }) => {
                 className="flex items-center gap-2 text-xs bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-md transition-colors duration-200 flex-1 justify-center"
               >
                 <FaExternalLinkAlt className="size-3" />
-                <span>Live Demo</span>
+                <span>Live</span>
               </Link>
 
               {/* GitHub Link */}

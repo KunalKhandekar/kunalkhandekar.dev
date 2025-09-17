@@ -32,7 +32,7 @@ export const ProjectAboutSection = () => {
             <span
               key={id}
               className="px-3 py-1 rounded-full bg-blue-100 dark:bg-[#121D2F] text-blue-500 text-xs font-semibold 
-           hover:bg-blue-500 hover:text-white cursor-pointer"
+           hover:bg-blue-500 hover:text-white"
             >
               {name}
             </span>
