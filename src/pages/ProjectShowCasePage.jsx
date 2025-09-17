@@ -5,14 +5,9 @@ import { ProjectAboutSection } from "../components/ProjectAboutSection";
 import ProjectContent from "../components/ProjectContent";
 import Publicbadge from "../components/Publicbadge";
 import ShareButtons from "../components/ShareButtons";
-import { headers } from "next/headers";
+
 
 export default async function ProjectShowCasePage({ projectName }) {
-  const headersList = headers();
-  const host = headersList.get("host");
-  const protocol = "http";
-  const fullUrl = `${protocol}://${host}/projects/${projectName}`;
-  
   return (
     <div className="max-w-7xl m-auto p-6 gap-5 max-[800px]:flex-col max-[800px]:p-0 max-[800px]:bg-[#F6F8FA] max-[800px]:dark:bg-[#010409]">
       <div className="dark:bg-[#0D1117] bg-white max-[800px]:border dark:border-zinc-800 border-zinc-300 max-[800px]:border-x-0 max-[800px]:p-4">
@@ -37,7 +32,7 @@ export default async function ProjectShowCasePage({ projectName }) {
           </div>
 
           {/* Right Section */}
-          <ShareButtons projectUrl={fullUrl} />
+          <ShareButtons projectName={projectName} />
         </div>
       </div>
 
