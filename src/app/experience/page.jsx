@@ -1,6 +1,7 @@
+import ExperiencePage from "../../pages/ExperiencePage";
 
 export default function Experience() {
   return (
-    <div>Experience</div>
+    <ExperiencePage />
   )
 }

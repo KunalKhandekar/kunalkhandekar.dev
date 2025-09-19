@@ -31,13 +31,6 @@ export const topics = [
       blockAt: "max-[330px]:block",
     },
     {
-      name: "education",
-      icon: <LuFileBadge className="size-4" />,
-      path: "/education",
-      hiddenAt: "max-[450px]:hidden",
-      blockAt: "max-[450px]:block",
-    },
-    {
       name: "achievements",
       icon: <GoRepoForked className="size-4" />,
       path: "/achievements",
