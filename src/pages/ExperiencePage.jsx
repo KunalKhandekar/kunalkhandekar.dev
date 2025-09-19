@@ -4,41 +4,56 @@ import { MdCalendarMonth } from "react-icons/md";
 import ProfileBar from "../components/ProfileBar";
 
 export default function ExperiencePage() {
+  const experiences = [
+    {
+      _id: "1",
+      companyLogo: "/quick_gick_logo.jpeg",
+      title: "Full Stack Developer",
+      location: "Remote",
+      timeLine: "Sep 2024 - Dec 2024",
+      isCurrent: false,
+      keyAchievements: [
+        "Designed and developed responsive web and mobile applications using modern frameworks",
+        "Implemented clean, efficient full-stack solutions with comprehensive documentation",
+        "Collaborated with cross-functional teams to deliver seamless user experiences",
+        "Built scalable server-side logic with robust database integration and API connectivity",
+      ],
+      technologiesUsed: [
+        "React",
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "MongoDB",
+        "REST APIs",
+      ],
+    }
+  ];
   return (
     <div className="max-w-7xl m-auto p-6 flex gap-5 max-[800px]:flex-col max-[800px]:p-0 max-[800px]:bg-[#F6F8FA] max-[800px]:dark:bg-[#010409]">
       <ProfileBar />
-      <div className="flex-3 max-w-4xl px-2 max-[800px]:dark:bg-[#0D1117] max-[800px]:bg-white max-[800px]:py-4 max-[800px]:border-zinc-300 max-[800px]:border-y max-[800px]:dark:border-zinc-800">
-        <div className="flex justify-center items-center gap-4 flex-col">
-          <ExperienceCard />
+      <div className="flex-3 max-w-4xl">
+        <div className="border-zinc-300 max-[800px]:rounded-none rounded-lg border dark:border-zinc-600 max-[800px]:border-zinc-300 max-[800px]:border-t max-[800px]:border-b max-[800px]:dark:border-zinc-800 p-6 dark:bg-[#0D1117] bg-white max-[800px]:border-l-0 max-[800px]:border-r-0">
+          <p className="text-xs font-mono text-shadow-initial pb-3">
+            SahilKhandekar<span className="px-0.5 text-gray-400">/</span>
+            Experience
+            <span className="text-gray-400">.md</span>
+          </p>
+          {experiences?.map((exp, index) => (
+            <div key={exp._id}>
+              <ExperienceCard data={exp} />
+              {index < experiences.length - 1 && (
+                <div className="my-6 border-t border-gray-300 dark:border-gray-700" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 }
-const ExperienceCard = () => {
-  const data = {
-    companyLogo: "/quick_gick_logo.jpeg",
-    title: "Full Stack Developer",
-    location: "Remote",
-    timeLine: "Sep 2024 - Dec 2024",
-    isCurrent: false,
-    keyAchievements: [
-      "Designed and developed responsive web and mobile applications using modern frameworks",
-      "Implemented clean, efficient full-stack solutions with comprehensive documentation",
-      "Collaborated with cross-functional teams to deliver seamless user experiences",
-      "Built scalable server-side logic with robust database integration and API connectivity",
-    ],
-    technologiesUsed: [
-      "React",
-      "Node.js",
-      "TypeScript",
-      "PostgreSQL",
-      "MongoDB",
-      "REST APIs",
-    ],
-  };
+const ExperienceCard = ({ data }) => {
   return (
-    <div className="border dark:border-zinc-600 border-zinc-300 rounded-lg w-full p-4 ">
+    <div className="w-full py-4 ">
       {/*Company & Title */}
       <div className="flex gap-2 justify-between items-start">
         <div className="flex gap-2 justify-center items-center dark:text-white text-black">
