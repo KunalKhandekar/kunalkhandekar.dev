@@ -23,4 +23,39 @@
 
 body {
   font-family: var(--font-family-sans);
-} 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.tweet-wrapper .tweet-info-module___F14PW__info,
+.tweet-wrapper .tweet-actions-module__TCXXfW__actions {
+  display: none !important;
+}
+
+.tweet-wrapper .tweet-replies-module__ktL-Xa__replies {
+  padding-top: 0.75rem;
+}
+
+.tweet-wrapper .tweet-body-module__ZNRZja__root {
+  font-size: 0.9rem !important;
+  line-height: 1.2;
+}
+
+.tweet-wrapper > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

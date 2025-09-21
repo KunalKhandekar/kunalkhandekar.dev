@@ -1,19 +1,19 @@
 "use client";
-import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { IoBookOutline } from "react-icons/io5";
+import { useState } from "react";
 import { GoRepoForked } from "react-icons/go";
-import { VscRepo } from "react-icons/vsc";
-import { LuFileBadge } from "react-icons/lu";
-import { MdOutlineBadge } from "react-icons/md";
 import { HiDotsHorizontal } from "react-icons/hi";
+import { IoBookOutline } from "react-icons/io5";
+import { MdOutlineArticle, MdOutlineBadge } from "react-icons/md";
+import { VscRepo } from "react-icons/vsc";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "../components/lib/Popover";
 import Button from "./lib/Button";
+import { FaRegHourglassHalf } from "react-icons/fa6";
 
 export const topics = [
     {
@@ -41,6 +41,20 @@ export const topics = [
       name: "experience",
       icon: <MdOutlineBadge className="size-4" />,
       path: "/experience",
+      hiddenAt: "max-[700px]:hidden",
+      blockAt: "max-[700px]:block",
+    },
+    {
+      name: "blogs",
+      icon: <MdOutlineArticle className="size-4" />,
+      path: "/blogs",
+      hiddenAt: "max-[700px]:hidden",
+      blockAt: "max-[700px]:block",
+    },
+    {
+      name: "consistency",
+      icon: <FaRegHourglassHalf className="size-4" />,
+      path: "/consistency",
       hiddenAt: "max-[700px]:hidden",
       blockAt: "max-[700px]:block",
     },
