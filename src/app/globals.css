@@ -40,22 +40,14 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-.tweet-wrapper .tweet-info-module___F14PW__info,
-.tweet-wrapper .tweet-actions-module__TCXXfW__actions {
-  display: none !important;
-}
-
-.tweet-wrapper .tweet-replies-module__ktL-Xa__replies {
-  padding-top: 0.75rem;
-}
-
-.tweet-wrapper .tweet-body-module__ZNRZja__root {
-  font-size: 0.9rem !important;
-  line-height: 1.2;
-}
-
-.tweet-wrapper > div {
-  flex: 1;
+.my-masonry-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  margin-left: -30px;
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
 }

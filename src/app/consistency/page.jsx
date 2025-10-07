@@ -1,4 +1,4 @@
-import { ConsistencyPage } from '../..//pages/ConsistencyPage'
+import ConsistencyPage from '../..//pages/ConsistencyPage'
 
 export default function Consistency() {
   return (
