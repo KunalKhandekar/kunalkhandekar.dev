@@ -92,7 +92,7 @@ export function SocialLinks() {
           href={social.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1  cursor-pointer"
+          className="flex items-center gap-1 cursor-pointer"
         >
           {social.icon}
           <p className="hover:text-blue-400">{social.userName}</p>

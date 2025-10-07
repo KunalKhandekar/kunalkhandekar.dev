@@ -6,6 +6,7 @@ import { GoRepoForked } from "react-icons/go";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { IoBookOutline } from "react-icons/io5";
 import { MdOutlineArticle, MdOutlineBadge } from "react-icons/md";
+import { RiMessage2Line } from "react-icons/ri";
 import { VscRepo } from "react-icons/vsc";
 import {
   Popover,
@@ -14,51 +15,59 @@ import {
 } from "../components/lib/Popover";
 import Button from "./lib/Button";
 import { FaRegHourglassHalf } from "react-icons/fa6";
+import { FaPhone } from "react-icons/fa";
 
 export const topics = [
-    {
-      name: "overview",
-      icon: <IoBookOutline className="size-4" />,
-      path: "/",
-      hiddenAt: "max-[280px]:hidden",
-      blockAt: "max-[280px]:block",
-    },
-    {
-      name: "projects",
-      icon: <VscRepo className="size-4" />,
-      path: "/projects",
-      hiddenAt: "max-[330px]:hidden",
-      blockAt: "max-[330px]:block",
-    },
-    {
-      name: "achievements",
-      icon: <GoRepoForked className="size-4" />,
-      path: "/achievements",
-      hiddenAt: "max-[570px]:hidden",
-      blockAt: "max-[570px]:block",
-    },
-    {
-      name: "experience",
-      icon: <MdOutlineBadge className="size-4" />,
-      path: "/experience",
-      hiddenAt: "max-[700px]:hidden",
-      blockAt: "max-[700px]:block",
-    },
-    {
-      name: "blogs",
-      icon: <MdOutlineArticle className="size-4" />,
-      path: "/blogs",
-      hiddenAt: "max-[700px]:hidden",
-      blockAt: "max-[700px]:block",
-    },
-    {
-      name: "consistency",
-      icon: <FaRegHourglassHalf className="size-4" />,
-      path: "/consistency",
-      hiddenAt: "max-[700px]:hidden",
-      blockAt: "max-[700px]:block",
-    },
-  ];
+  {
+    name: "overview",
+    icon: <IoBookOutline className="size-4" />,
+    path: "/",
+    hiddenAt: "max-[280px]:hidden",
+    blockAt: "max-[280px]:block",
+  },
+  {
+    name: "projects",
+    icon: <VscRepo className="size-4" />,
+    path: "/projects",
+    hiddenAt: "max-[330px]:hidden",
+    blockAt: "max-[330px]:block",
+  },
+  {
+    name: "achievements",
+    icon: <GoRepoForked className="size-4" />,
+    path: "/achievements",
+    hiddenAt: "max-[570px]:hidden",
+    blockAt: "max-[570px]:block",
+  },
+  {
+    name: "experience",
+    icon: <MdOutlineBadge className="size-4" />,
+    path: "/experience",
+    hiddenAt: "max-[700px]:hidden",
+    blockAt: "max-[700px]:block",
+  },
+  {
+    name: "blogs",
+    icon: <MdOutlineArticle className="size-4" />,
+    path: "/blogs",
+    hiddenAt: "max-[700px]:hidden",
+    blockAt: "max-[700px]:block",
+  },
+  {
+    name: "consistency",
+    icon: <FaRegHourglassHalf className="size-4" />,
+    path: "/consistency",
+    hiddenAt: "max-[700px]:hidden",
+    blockAt: "max-[700px]:block",
+  },
+  {
+    name: "contact",
+    icon: <RiMessage2Line className="size-4" />,
+    path: "/contact",
+    hiddenAt: "max-[700px]:hidden",
+    blockAt: "max-[700px]:block",
+  },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -127,7 +136,7 @@ export default function Navbar() {
                           {icon} {name}
                         </span>
                       }
-                       classes="w-full justify-start"
+                      classes="w-full justify-start"
                     />
                   </Link>
                 </li>
