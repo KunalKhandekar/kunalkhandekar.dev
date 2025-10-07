@@ -19,33 +19,32 @@ export default function ContactForm() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // clearing field-specific error while typing
+    // clear the field-specific error while typing
     setErrors((prev) => ({ ...prev, [`${name}Error`]: "" }));
+  };
+
+  const resetForm = () => {
+    setFormData({ name: "", email: "", message: "" });
+    setErrors({ nameError: "", emailError: "", messageError: "" });
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    setIsSubmitting(false);
-    setErrors({
-      nameError: "",
-      emailError: "",
-      messageError: "",
-    });
+    // reset flags
+    setIsSuccess(false);
+    setErrors({ nameError: "", emailError: "", messageError: "" });
 
     const name = formData.name.trim();
     const email = formData.email.trim();
     const message = formData.message.trim();
 
-    let localErrors = {
-      nameError: "",
-      emailError: "",
-      messageError: "",
-    };
+    let localErrors = { nameError: "", emailError: "", messageError: "" };
     let hasError = false;
 
     if (!name) {
@@ -69,11 +68,12 @@ export default function ContactForm() {
     setErrors(localErrors);
 
     if (hasError) {
+      // focus first invalid field
       if (localErrors.nameError) {
         document.getElementById("name")?.focus();
       } else if (localErrors.emailError) {
         document.getElementById("email")?.focus();
-      } else if (localErrors.messageError) {
+      } else {
         document.getElementById("message")?.focus();
       }
       return;
@@ -82,33 +82,52 @@ export default function ContactForm() {
     try {
       setIsSubmitting(true);
 
+      // Replace with actual submit (fetch/axios)
       console.log({ name, email, message });
-      setFormData({ name: "", email: "", message: "" });
-      setErrors({ nameError: "", emailError: "", messageError: "" });
+
+      // simulate network delay
+      await new Promise((res) => setTimeout(res, 600));
+
+      resetForm();
+      setIsSuccess(true);
+
+      // hide success after a short while
+      setTimeout(() => setIsSuccess(false), 3000);
     } catch (err) {
       console.error("Submit error:", err);
+      // optional: set a global form error message in UI
     } finally {
       setIsSubmitting(false);
     }
   };
+
   return (
     <div>
       <form onSubmit={handleFormSubmit} noValidate>
         <div className="py-5 flex flex-col gap-4">
           <div className="w-full flex flex-col gap-2">
-            <label htmlFor="name" className="text-md max-[800px]:text-sm">
+            <label
+              htmlFor="name"
+              className="text-md max-[800px]:text-sm text-gray-700 dark:text-gray-200"
+            >
               Name<span className="text-red-500 pl-0.5">*</span>
             </label>
             <input
               type="text"
               placeholder="Your name"
               id="name"
-              value={formData.name}
               name="name"
+              value={formData.name}
               onChange={handleChange}
               aria-invalid={!!errors.nameError}
               aria-describedby={errors.nameError ? "name-error" : undefined}
-              className="px-4 py-1.5 focus:outline-2 focus:outline-white bg-zinc-950 rounded-lg border border-gray-700 text-md max-[800px]:text-sm"
+              className={
+                "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none " +
+                "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
+                "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
+                // focus ring: subtle green in light mode, white ring in dark mode for contrast
+                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+              }
             />
             {errors.nameError && (
               <p id="name-error" className="text-red-400 text-sm">
@@ -118,7 +137,10 @@ export default function ContactForm() {
           </div>
 
           <div className="w-full flex flex-col gap-2">
-            <label htmlFor="email" className="text-md max-[800px]:text-sm">
+            <label
+              htmlFor="email"
+              className="text-md max-[800px]:text-sm text-gray-700 dark:text-gray-200"
+            >
               Email<span className="text-red-500 pl-0.5">*</span>
             </label>
             <input
@@ -130,7 +152,12 @@ export default function ContactForm() {
               onChange={handleChange}
               aria-invalid={!!errors.emailError}
               aria-describedby={errors.emailError ? "email-error" : undefined}
-              className="px-4 py-1.5 focus:outline-2 focus:outline-white bg-zinc-950 rounded-lg border border-gray-700 text-md max-[800px]:text-sm"
+              className={
+                "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none " +
+                "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
+                "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
+                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+              }
             />
             {errors.emailError && (
               <p id="email-error" className="text-red-400 text-sm">
@@ -140,7 +167,10 @@ export default function ContactForm() {
           </div>
 
           <div className="w-full flex flex-col gap-2">
-            <label htmlFor="message" className="text-md max-[800px]:text-sm">
+            <label
+              htmlFor="message"
+              className="text-md max-[800px]:text-sm text-gray-700 dark:text-gray-200"
+            >
               Message<span className="text-red-500 pl-0.5">*</span>
             </label>
             <textarea
@@ -154,7 +184,12 @@ export default function ContactForm() {
               aria-describedby={
                 errors.messageError ? "message-error" : undefined
               }
-              className="px-4 py-1.5 focus:outline-2 focus:outline-white bg-zinc-950 rounded-lg border border-gray-700 text-md max-[800px]:text-sm"
+              className={
+                "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none resize-y " +
+                "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
+                "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
+                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+              }
             />
             {errors.messageError && (
               <p id="message-error" className="text-red-400 text-sm">
@@ -164,16 +199,34 @@ export default function ContactForm() {
           </div>
         </div>
 
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="border border-green-800 bg-green-700 p-2 px-4 rounded-lg font-semibold text-sm cursor-pointer disabled:opacity-60"
-        >
-          {isSubmitting ? "Sending…" : "Send Message"}
-        </button>
+        <div className="flex items-center gap-3">
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className={
+              "inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-semibold text-sm " +
+              "transition-opacity duration-150 " +
+              (isSubmitting
+                ? "bg-green-600 border border-green-700 text-white opacity-70 cursor-wait"
+                : "bg-green-700 border border-green-800 text-white hover:brightness-95")
+            }
+          >
+            {isSubmitting ? "Sending…" : "Send Message"}
+          </button>
+
+          {isSuccess && (
+            <div
+              role="status"
+              aria-live="polite"
+              className="text-sm text-green-600 dark:text-green-300"
+            >
+              Message sent!
+            </div>
+          )}
+        </div>
       </form>
 
-      <div className="flex justify-start items-center gap-3 mt-6 max-[800px]:hidden">
+      <div className="flex justify-start items-center gap-3 mt-6 max-[800px]:hidden text-gray-700 dark:text-gray-300">
         <FaLongArrowAltLeft className="size-6" />
         <p>Alternatively, you can contact me on my socials</p>
       </div>
