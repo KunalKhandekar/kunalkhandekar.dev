@@ -2,32 +2,10 @@ import Image from "next/image";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdCalendarMonth } from "react-icons/md";
 import ProfileBar from "../components/ProfileBar";
+import { experiences } from "../utils/constant";
 
 export default function ExperiencePage() {
-  const experiences = [
-    {
-      _id: "1",
-      companyLogo: "/quick_gick_logo.jpeg",
-      title: "Full Stack Developer",
-      location: "Remote",
-      timeLine: "Sep 2024 - Dec 2024",
-      isCurrent: false,
-      keyAchievements: [
-        "Designed and developed responsive web and mobile applications using modern frameworks",
-        "Implemented clean, efficient full-stack solutions with comprehensive documentation",
-        "Collaborated with cross-functional teams to deliver seamless user experiences",
-        "Built scalable server-side logic with robust database integration and API connectivity",
-      ],
-      technologiesUsed: [
-        "React",
-        "Node.js",
-        "TypeScript",
-        "PostgreSQL",
-        "MongoDB",
-        "REST APIs",
-      ],
-    }
-  ];
+  
   return (
     <div className="max-w-7xl m-auto p-6 flex gap-5 max-[800px]:flex-col max-[800px]:p-0 max-[800px]:bg-[#F6F8FA] max-[800px]:dark:bg-[#010409]">
       <ProfileBar />

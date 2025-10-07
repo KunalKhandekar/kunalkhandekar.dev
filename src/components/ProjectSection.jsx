@@ -11,114 +11,21 @@ import { useMemo, useState } from "react";
 import LanguageSelect from "./LanguageSelect";
 import React from "react";
 import Image from "next/image";
+import { languages, projectListings } from "../utils/constant";
 
 export default function ProjectSection() {
   const [view, setView] = useState("list");
   const [selectedLang, setSelectedLang] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
 
-  const projects = [
-    {
-      title: "talkAtive",
-      navLink: "talkAtive",
-      description:
-        "TalkAtive is a dynamic real-time chat application built with the MERN stack, empowering users to connect and engage in seamless conversations. It offers a user-friendly interface, secure authentication, robust chat functionality, and real-time messaging through WebSockets.",
-      stack: "MERN",
-      liveLink: "chat-talkative.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/talkAtive",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center",
-      languages: [
-        "html",
-        "css",
-        "tailwind",
-        "next",
-        "react",
-        "node",
-        "javascript",
-      ],
-    },
-    {
-      title: "EcoTracker",
-      navLink: "EcoTracker",
-      description:
-        "A comprehensive carbon footprint tracking application that helps users monitor their daily environmental impact. Built with React and Node.js, featuring interactive charts, goal setting, and personalized recommendations for sustainable living.",
-      stack: "React, Node.js",
-      liveLink: "ecotracker-app.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/EcoTracker",
-      image:
-        "https://images.unsplash.com/photo-1569163139394-de44cb2c2e86?w=500&h=300&fit=crop&crop=center",
-      languages: ["html", "css"],
-    },
-    {
-      title: "TaskFlow Pro",
-      navLink: "TaskFlow-Pro",
-      description:
-        "An advanced project management tool designed for teams to collaborate efficiently. Features include kanban boards, time tracking, file sharing, and real-time notifications. Built with Next.js, TypeScript, and PostgreSQL for optimal performance.",
-      stack: "Next.js, TypeScript",
-      liveLink: "taskflow-pro.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/TaskFlowPro",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center",
-      languages: ["tailwind", "next", "react", "node"],
-    },
-    {
-      title: "CryptoWatch",
-      navLink: "CryptoWatch",
-      description:
-        "A real-time cryptocurrency portfolio tracker with advanced analytics and price alerts. Integrates with multiple exchanges, provides market insights, and offers automated trading suggestions. Built with Vue.js and Express.js.",
-      stack: "Vue.js, Express",
-      liveLink: "cryptowatch-live.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/CryptoWatch",
-      image:
-        "https://images.unsplash.com/photo-1640340434855-6084b1f4901c?w=500&h=300&fit=crop&crop=center",
-      languages: ["react", "node"],
-    },
-    {
-      title: "FitnessPal",
-      navLink: "FitnessPal",
-      description:
-        "A comprehensive fitness tracking application that monitors workouts, nutrition, and health metrics. Features AI-powered workout recommendations, meal planning, and progress visualization. Developed using React Native and Firebase.",
-      stack: "React Native",
-      liveLink: "fitnesspal-app.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/FitnessPal",
-      image:
-        "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop&crop=center",
-      languages: ["html", "node"],
-    },
-    {
-      title: "CodeShare",
-      navLink: "CodeShare",
-      description:
-        "A collaborative code editor platform where developers can share, review, and collaborate on code snippets in real-time. Supports multiple programming languages with syntax highlighting and version control integration.",
-      stack: "Angular, Socket.io",
-      liveLink: "codeshare-editor.vercel.app/",
-      gitHubLink: "https://github.com/KunalKhandekar/CodeShare",
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=center",
-      languages: ["html"],
-    },
-  ];
-
-  const languages = [
-    { value: "all", label: "All" },
-    { value: "javascript", label: "JavaScript" },
-    { value: "html", label: "HTML" },
-    { value: "typescript", label: "TypeScript" },
-    { value: "css", label: "CSS" },
-    { value: "tailwind", label: "Tailwind CSS" },
-    { value: "react", label: "React.js" },
-    { value: "node", label: "Node.js" },
-  ];
-
   const filteredRepos = useMemo(() => {
-    return projects.filter(
+    return projectListings.filter(
       (proj) =>
         (selectedLang === "all" || proj.languages.includes(selectedLang)) &&
         (proj.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           proj.description.toLowerCase().includes(searchTerm.toLowerCase()))
     );
-  }, [projects, selectedLang, searchTerm]);
+  }, [projectListings, selectedLang, searchTerm]);
 
   return (
     <section className="flex-3 max-w-4xl max-[800px]:p-4 max-[800px]:dark:bg-[#0D1117] max-[800px]:bg-white max-[800px]:border-zinc-300 max-[800px]:border-y max-[800px]:dark:border-zinc-800">

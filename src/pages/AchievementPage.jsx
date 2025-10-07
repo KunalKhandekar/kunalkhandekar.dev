@@ -2,51 +2,9 @@
 
 import { AchievementCard } from "../components/AchievementsCard";
 import ProfileBar from "../components/ProfileBar";
+import { achievements } from "../utils/constant";
 
 export default function AchievementPage() {
-  const achievements = [
-    {
-      _id: "1",
-      companyLogo: "/postman_badge.png",
-      title: "Postman API Fundamental Badge",
-      timeLine: "Nov 2024",
-      descriptionTitle: "Description",
-      descriptionPoints: [
-        "This badge was awarded for demonstrating proficiency with APIs and Postman by completing foundational tasks in Postman and passing all tests with a submitted Postman Collection",
-      ],
-      images: ["/achievements/postman.png"],
-    },
-    {
-      _id: "2",
-      companyLogo: "/technovate_logo.jpeg",
-      title: "Technovate 24-Hour Hackathon",
-      company: "Technovate",
-      timeLine: "Nov 2024",
-      descriptionTitle: "Project",
-      descriptionPoints: [
-        "Collaborated in a multidisciplinary team to design and deliver a working MVP within 24 hours.",
-        "Developed frontend UI components using React.",
-        "Integrated backend APIs using Node.js and Express.js.",
-      ],
-      images: ["/achievements/technovate_certificate.png"],
-    },
-    {
-      _id: "3",
-      companyLogo: "/lala_rajpatrai_college.jpeg",
-      title: "Technotronix - Code quiz",
-      timeLine: "Sep 2024",
-      location: "Mumbai, Maharashtra, India · On-site",
-      descriptionTitle: "Description",
-      descriptionPoints: [
-        "Awarded 1st place in an intercollegiate coding quiz covering HTML, C++, and SQL.",
-        "Demonstrated strong conceptual knowledge and fast problem-solving under timed conditions.",
-      ],
-      images: [
-        "/achievements/technotronix_certificate.jpeg",
-        "/achievements/1756384996106.jpeg",
-      ],
-    },
-  ];
   return (
     <div className="max-w-7xl m-auto p-6 flex gap-5 max-[800px]:flex-col max-[800px]:p-0 max-[800px]:bg-[#F6F8FA] max-[800px]:dark:bg-[#010409]">
       <ProfileBar />

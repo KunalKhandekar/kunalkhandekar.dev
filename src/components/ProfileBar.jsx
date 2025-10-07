@@ -3,6 +3,7 @@ import { MdOutlineLocationOn } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
+import { mainDescription, role } from "../utils/constant";
 
 export default function ProfileBar() {
   return (
@@ -16,15 +17,13 @@ export default function ProfileBar() {
           <div className="flex flex-col justify-center">
             <h3 className="font-semibold text-2xl max-[980px]:text-xl max-[800px]:text-lg">Sahil Khandekar</h3>
             <span className="font-thin text-lg max-[980px]:text-md max-[800px]:text-sm dark:text-zinc-200 text-zinc-950">
-              Full Stack Developer
+              {role}
             </span>
           </div>
 
           <div className="py-3 max-[800px]:hidden border-b dark:border-zinc-800 border-zinc-300 text-md max-[980px]:text-sm">
             <p>
-              👋 Hello there, fellow tech enthusiasts and curious minds! 🚀, I'm
-              Sahil (Kunal), a student with a deep passion for coding and all
-              things tech-related.
+              {mainDescription}
             </p>
           </div>
         </div>
@@ -40,9 +39,7 @@ export default function ProfileBar() {
 
       <div className="py-3 max-[800px]:block hidden text-md max-[980px]:text-sm ">
             <p>
-              👋 Hello there, fellow tech enthusiasts and curious minds! 🚀, I'm
-              Sahil (Kunal), a student with a deep passion for coding and all
-              things tech-related.
+              {mainDescription}
             </p>
           </div>
     </div>
