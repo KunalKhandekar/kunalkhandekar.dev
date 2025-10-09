@@ -1,6 +1,8 @@
 // OVERVIEW SECTION
 export const role = "Full Stack Developer";
 
+export const BASE_URL="http://localhost:3000";
+
 export const mainDescription =
   "🌱 Learning, building, and growing — one line of code at a time.";
 
@@ -21,16 +23,16 @@ This portfolio is a reflection of my journey in crafting impactful, scalable, an
 <div align="center">
 
 ### Frontend  
-![React](https://skillicons.dev/icons?i=react,nextjs,js,tailwind,redux,html,materialui,redux)
+![React](/images/Frontend.svg)
 
 ### Backend  
-![NodeJS](https://skillicons.dev/icons?i=nodejs,express,mongodb,redis,docker,firebase,postman)
+![NodeJS](/images/Backend.svg)
 
 ### Tools & DevOps  
-![Tools](https://skillicons.dev/icons?i=git,github,githubactions,vercel,netlify,nginx,vscode)
+![Tools](/images/Tools&DevOps.svg)
 
 ### Cloud & Integrations  
-![Cloud](https://skillicons.dev/icons?i=aws,gcp,npm,vite)
+![Cloud](/images/Cloud&Integration.svg)
 
 </div>
 
