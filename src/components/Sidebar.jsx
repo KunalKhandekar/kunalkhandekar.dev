@@ -4,7 +4,7 @@ import { Activity, Info, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Avatar from "./lib/Avatar";
 import { topics } from "./Navbar";
 import { SocialLinks } from "./ProfileBar";
@@ -14,6 +14,14 @@ export default function Sidebar({ children }) {
   const { setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState("English");
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+  }, [isOpen]);
 
   return (
     <>
