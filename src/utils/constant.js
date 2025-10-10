@@ -1,7 +1,7 @@
 // OVERVIEW SECTION
 export const role = "Full Stack Developer";
 
-export const BASE_URL="http://localhost:3000";
+export const BASE_URL = "http://localhost:3000";
 
 export const mainDescription =
   "🌱 Learning, building, and growing — one line of code at a time.";
@@ -159,8 +159,7 @@ export const projectListings = [
     stack: "MERN + AWS",
     liveLink: "under-developement",
     gitHubLink: "https://github.com/KunalKhandekar/Storage-App",
-    image:
-      "/projects/StorageApp.png",
+    image: "/projects/StorageApp.png",
     languages: ["tailwind", "next", "react", "node"],
   },
   {
@@ -171,8 +170,7 @@ export const projectListings = [
     stack: "React + Node.js",
     liveLink: "https://chat-talkative.vercel.app",
     gitHubLink: "https://github.com/KunalKhandekar/talkAtive",
-    image:
-     "/projects/talkAtive.png",
+    image: "/projects/talkAtive.png",
     languages: [
       "html",
       "css",
@@ -191,34 +189,146 @@ export const projectListings = [
     stack: "HTML + CSS",
     liveLink: "https://usabilityhub-clone-by-kunal.netlify.app",
     gitHubLink: "https://github.com/KunalKhandekar/UsabilityHub-Clone",
-    image:
-      "/projects/usability-clone.png",
+    image: "/projects/usability-clone.png",
     languages: ["html", "css"],
   },
 ];
 
 export const projectDetails = [
-    {
-        name: "Storage App",
-        description: "",
-        topics: [],
-        readmeContent: ``,
-        images : [],
-        gitHubLink: "",
-        liveLink: "",
-        developmentSummary: {
-            frameworkAndLibrary: "",
-            StylingAndUI: "",
-            BackendAndAPI: "",
-        },
-        languagesUsed: [{
-            javascript: '96.2%'
-        }, {
-            html: "3.8%"
-        }]
+  {
+    name: "Storage App",
+    navLink: "Storage-App",
+    description:
+      "A secure and scalable cloud storage web application built with the MERN stack. Supports file uploads, sharing, and management using AWS S3 and Google Drive integration, with authentication, role-based access, and an admin dashboard.",
+    tags: [
+      { id: 1, topic: "cloud-storage" },
+      { id: 2, topic: "mern-stack" },
+      { id: 3, topic: "file-upload" },
+      { id: 4, topic: "file-sharing" },
+      { id: 5, topic: "aws-s3" },
+      { id: 6, topic: "google-drive-api" },
+      { id: 7, topic: "authentication" },
+      { id: 8, topic: "admin-dashboard" },
+      { id: 9, topic: "nodejs" },
+      { id: 10, topic: "react" },
+    ],
+    readmeContent: `# 🚀 Storage App
 
-    }
-]
+A **full-stack cloud storage platform** that lets users securely upload, manage, and share files — with **AWS S3 integration** and **Google Drive import** support.  
+Built using **React + Vite + TailwindCSS (Frontend)** and **Node.js + Express + MongoDB + Redis (Backend)**.
+
+
+## ✨ Features
+
+### 🔐 Authentication & Security
+- Login with **Email/Password**, **Google**, or **GitHub**.
+- OTP-based verification for secure signups.
+- Encrypted passwords (bcrypt) and signed cookies.
+- Helmet, CORS, and sanitization for enhanced protection.
+- Rate Limiting and Redis-based session control.
+
+### 📂 File Management
+- Upload files (PDF, Images, Videos, Docs, etc.) with real-time progress.
+- Stored securely in **AWS S3**.
+- Grid/List view with search, rename, delete (soft/hard), and restore.
+- File details: size, type, modified date, etc.
+- Real-time storage usage and quota tracking.
+
+### ☁️ Cloud Storage & Import
+- **AWS S3 + CloudFront CDN** for global and fast delivery.
+- **Google Drive Import** — fetch and save Drive files directly.
+- Batch imports with metadata preservation.
+
+### 🏷️ Sharing & Permissions
+- Share files via email or public links.
+- Role-based access control (Viewer / Editor).
+- Manage “Shared by Me” and “Shared with Me” files.
+- Real-time updates and activity tracking.
+
+### ⚙️ Settings & Customization
+- Update profile, password, and manage sessions.
+- View used and available storage.
+- Logout, disable, or delete account.
+
+### 🛠️ Admin Dashboard
+- User management: view, filter, edit, or delete users.
+- Role management (User, Manager, Admin, SuperAdmin).
+- File management with directory view.
+- Soft & hard delete recovery system.
+- Real-time tracking of online users.
+
+
+## ⚡ Tech Stack
+
+| Category | Technologies |
+|-----------|--------------|
+| **Frontend** | React, Vite, TailwindCSS |
+| **Backend** | Node.js, Express.js |
+| **Database** | MongoDB, Redis |
+| **Cloud Storage** | AWS S3, CloudFront CDN |
+| **Integrations** | Google Drive API, OAuth (Google & GitHub) |
+
+
+
+## 🔗 Project Links
+
+- **Frontend:** React + Vite + TailwindCSS  
+- **Backend:** Node.js + Express + MongoDB  
+- **GitHub Repository:** [KunalKhandekar/Storage-App](https://github.com/KunalKhandekar/Storage-App)
+
+`,
+    images: [
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Login%20%26%20Register/Login.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Login%20%26%20Register/Register.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Login%20%26%20Register/opt.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/HomePage/HomePage.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/HomePage/UploadProgress.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/HomePage/GridView.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/HomePage/Details%20Modal.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/HomePage/Dropdowm.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Settings/Settings-1.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Settings/Settings-2.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Settings/Settings-3.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/Share-by-link.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/Share-by-email.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/SharedWith.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/Dashboard.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/by-me.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/with-me.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Share/Permission.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Admin/Dashboard.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Admin/Online-User.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Admin/Hard-Soft%20Delete.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/Admin/Single%20User%20view.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/GoogleDrive/SelectFiles.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/GoogleDrive/ImportProgress.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/Storage-App/main/docs/ScreenShots/GoogleDrive/ImportSuccess.png",
+    ],
+    gitHubLink: "https://github.com/KunalKhandekar/Storage-App",
+    liveLink: "underdevelopment",
+    developmentSummary: [
+      {
+        id: 1,
+        title: "Framework & Library",
+        value: "React, Vite frontend; Node.js, Express backend",
+      },
+      {
+        id: 2,
+        title: "Styling & UI",
+        value: "TailwindCSS, DaisyUI, responsive, modern design",
+      },
+      {
+        id: 3,
+        title: "Backend & API",
+        value: "MongoDB, Redis, AWS S3, Google Drive, OAuth",
+      },
+    ],
+    languagesUsed: [
+      { name: "JavaScript", percent: 90.2, color: "bg-yellow-300" },
+      { name: "CSS", percent: 4.8, color: "bg-purple-700" },
+    ],
+  },
+];
 
 export const languages = [
   { value: "all", label: "All" },

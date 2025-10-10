@@ -5,9 +5,14 @@ import { ProjectAboutSection } from "../components/ProjectAboutSection";
 import ProjectContent from "../components/ProjectContent";
 import Publicbadge from "../components/Publicbadge";
 import ShareButtons from "../components/ShareButtons";
-
+import { projectDetails } from "../utils/constant";
 
 export default async function ProjectShowCasePage({ projectName }) {
+  console.log(projectDetails);
+  const projectShowcaseContent = projectDetails.find((project) => project.navLink === projectName);
+  console.log(projectShowcaseContent)
+  if (!projectShowcaseContent) return <div>No Project Found</div>;
+
   return (
     <div className="max-w-7xl m-auto p-6 gap-5 max-[800px]:flex-col max-[800px]:p-0 max-[800px]:bg-[#F6F8FA] max-[800px]:dark:bg-[#010409]">
       <div className="dark:bg-[#0D1117] bg-white max-[800px]:border dark:border-zinc-800 border-zinc-300 max-[800px]:border-x-0 max-[800px]:p-4">
@@ -32,14 +37,14 @@ export default async function ProjectShowCasePage({ projectName }) {
           </div>
 
           {/* Right Section */}
-          <ShareButtons projectName={projectName} />
+          <ShareButtons />
         </div>
       </div>
 
       {/* Readme & About */}
       <div className="flex gap-2 py-6 max-[800px]:flex-col-reverse max-[800px]:py-4 max-[800px]:gap-4">
-        <ProjectContent />
-        <ProjectAboutSection />
+        <ProjectContent projectDetail={projectShowcaseContent} />
+        <ProjectAboutSection projectDetail={projectShowcaseContent} />
       </div>
     </div>
   );
