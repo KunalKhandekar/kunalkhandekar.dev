@@ -181,20 +181,102 @@ export const projectListings = [
       "express",
     ],
   },
-  {
-    title: "UsabiltyHub Clone",
-    navLink: "UsabiltyHub-Clone",
-    description:
-      "This is a clone of the UsabiltyHub website, created using HTML and CSS. It replicates the design and layout of the original UsabiltyHub website.",
-    stack: "HTML + CSS",
-    liveLink: "https://usabilityhub-clone-by-kunal.netlify.app",
-    gitHubLink: "https://github.com/KunalKhandekar/UsabilityHub-Clone",
-    image: "/projects/usability-clone.png",
-    languages: ["html", "css"],
-  },
 ];
 
 export const projectDetails = [
+  {
+    name: "TalkAtive",
+    navLink: "TalkAtive",
+    description:
+      "TalkAtive is a dynamic real-time chat application built with the MERN stack, empowering users to connect and engage in seamless conversations. It offers a user-friendly interface, secure authentication, robust chat functionality, and real-time messaging through WebSockets. ",
+    tags: [
+  { id: 1, topic: "real-time-chat" },
+  { id: 2, topic: "mern-stack" },
+  { id: 3, topic: "websockets" },
+  { id: 4, topic: "socket-io" },
+  { id: 5, topic: "authentication" },
+  { id: 6, topic: "media-sharing" },
+  { id: 7, topic: "react" },
+  { id: 8, topic: "expressjs" },
+  { id: 9, topic: "mongodb" },
+  { id: 10, topic: "zustand" },
+    ],
+    readmeContent: `# TalkAtive: Real-time Chat Web Application
+
+**TalkAtive** is a dynamic real-time chat application built with the MERN stack, empowering users to connect and engage in seamless conversations. It offers a user-friendly interface, secure authentication, robust chat functionality, and real-time messaging through WebSockets.
+
+### Features
+
+* **Real-time Messaging:** Utilizes WebSockets for instant and smooth message delivery, ensuring conversations flow uninterrupted.
+* **Secure User Authentication:** Provides login and registration functionalities to manage user access with robust security measures.
+* **Multiple Media Sharing:** Users can share Images/Videos directly.
+* **User Presence:** Displays online users and users currently typing messages, enhancing communication visibility.
+* **Responsive Interface:** Adapts seamlessly across various screen sizes, delivering an optimal user experience on any device.
+
+
+### Technologies Used
+
+**Frontend:**
+
+* **React:** For building interactive UI components
+* **Zustand:** For lightweight and scalable state management
+* **DaisyUI:** Tailwind CSS component library for efficient UI development
+* **React Router Dom:** For elegant navigation and routing
+* **Axios:** For making HTTP requests to backend APIs
+* **js-cookie:** For managing cookies in the browser
+* **File-Saver:** For enabling users to save files locally
+* **React Hot Toast:** For displaying customizable notification toasts
+* **React Icons:** For incorporating a collection of popular icons
+* **Moment.js:** For flexible date and time formatting/manipulation
+* **Socket.IO Client:** For real-time communication
+* **React Cookies:** Additional cookie management for React
+
+**Backend:**
+
+* **Express.js:** For building a robust server-side application
+* **Mongoose:** For efficient MongoDB interaction and data management
+* **bcrypt:** For secure password hashing
+* **jsonwebtoken:** For generating JSON Web Tokens (JWTs) for authentication
+* **cookie-parser:** For parsing cookies from HTTP requests
+* **cors:** For enabling Cross-Origin Resource Sharing (CORS)
+* **dotenv:** For managing environment variables
+* **moment:** For flexible date and time formatting/manipulation
+* **nodemailer:** For sending emails
+* **otp-generator:** For generating one-time passwords (OTPs)
+* **socket.io:** For real-time communication
+
+`,
+    images: [
+  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Login.png",
+  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Register.png",
+  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Chat.png",
+  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Search.png",
+  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Update.png",
+],
+    gitHubLink: "https://github.com/KunalKhandekar/talkAtive",
+    liveLink: "https://chat-talkative.vercel.app",
+    developmentSummary: [
+  {
+    id: 1,
+    title: "Framework & Libraries",
+    value: "React (Vite) frontend; Node.js, Express.js backend",
+  },
+  {
+    id: 2,
+    title: "State & Realtime",
+    value: "Zustand for state management, Socket.IO for real-time communication",
+  },
+  {
+    id: 3,
+    title: "Database & Auth",
+    value: "MongoDB with Mongoose, JWT Authentication, Secure Cookies",
+  },
+],
+    languagesUsed: [
+      { name: "JavaScript", percent: 98.9, color: "bg-yellow-300" },
+      { name: "Other", percent: 1.1, color: "bg-white" },
+    ],
+  },
   {
     name: "Storage App",
     navLink: "Storage-App",
@@ -315,7 +397,7 @@ Built using **React + Vite + TailwindCSS (Frontend)** and **Node.js + Express + 
       {
         id: 2,
         title: "Styling & UI",
-        value: "TailwindCSS, DaisyUI, responsive, modern design",
+        value: "TailwindCSS, responsive, modern design",
       },
       {
         id: 3,

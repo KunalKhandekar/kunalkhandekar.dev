@@ -50,22 +50,22 @@ export const topics = [
     name: "blogs",
     icon: <MdOutlineArticle className="size-4" />,
     path: "/blogs",
-    hiddenAt: "max-[700px]:hidden",
-    blockAt: "max-[700px]:block",
+    hiddenAt: "max-[790px]:hidden",
+    blockAt: "max-[790px]:block",
   },
   {
     name: "consistency",
     icon: <FaRegHourglassHalf className="size-4" />,
     path: "/consistency",
-    hiddenAt: "max-[700px]:hidden",
-    blockAt: "max-[700px]:block",
+    hiddenAt: "max-[850px]:hidden",
+    blockAt: "max-[850px]:block",
   },
   {
     name: "contact",
     icon: <RiMessage2Line className="size-4" />,
     path: "/contact",
-    hiddenAt: "max-[700px]:hidden",
-    blockAt: "max-[700px]:block",
+    hiddenAt: "max-[900px]:hidden",
+    blockAt: "max-[900px]:block",
   },
 ];
 
@@ -74,7 +74,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between">
+    <nav className="w-full flex items-center justify-between overflow-x-scroll cursor-grab">
       <ul className="flex items-center gap-4">
         {topics.map(({ name, icon, path, hiddenAt }) => {
           const isActive = pathname === path;
@@ -108,12 +108,12 @@ export default function Navbar() {
           <button
             aria-haspopup="menu"
             aria-expanded={open}
-            className="min-[701px]:hidden flex items-center justify-center w-8 h-8 rounded border border-zinc-300 dark:border-zinc-600 dark:bg-[#212830] mb-2"
+            className="min-[900px]:hidden flex items-center justify-center w-8 h-8 rounded border border-zinc-300 dark:border-zinc-600 dark:bg-[#212830] mb-2"
           >
             <HiDotsHorizontal size={18} />
           </button>
         </PopoverTrigger>
-        <PopoverContent className="min-[701px]:hidden min-w-[140px] max-w-[200px]">
+        <PopoverContent className="min-[900px]:hidden min-w-[140px] max-w-[200px]">
           <ul className="flex flex-col gap-1">
             {topics.map(({ name, icon, path, blockAt }) => {
               const isActive = pathname === path;
