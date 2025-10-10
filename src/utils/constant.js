@@ -51,12 +51,12 @@ This project reflects my interest in **system design**, **API architecture**, an
 
 ## 🧭 About Me
 
-- 🎓 Pursuing **BSc in Information Technology** at the **University of Mumbai**  
-- 💡 Strong foundation in **MERN stack development** with hands-on project experience  
-- 📈 Focused on writing **clean, maintainable**, and **scalable code**  
-- 🧠 Passionate about **problem-solving**, **system design**, and **developer experience**  
-- 🤝 Open to **collaborations**, **internships**, and **open-source** contributions  
-- 📘 Constantly learning and applying **modern web technologies** through practical projects  
+- Pursuing **BSc in Information Technology** at the **University of Mumbai**  
+- Strong foundation in **MERN stack development** with hands-on project experience  
+- Focused on writing **clean, maintainable**, and **scalable code**  
+- Passionate about **problem-solving**, **system design**, and **developer experience**  
+- Open to **collaborations**, **internships**, and **open-source** contributions  
+- Constantly learning and applying **modern web technologies** through practical projects  
 
 I enjoy building projects that solve meaningful problems — combining technical precision with thoughtful design.
 

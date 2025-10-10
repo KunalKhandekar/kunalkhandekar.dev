@@ -11,7 +11,7 @@ export default function PinnedRespositories() {
       <h3 className="text-md max-[800]:px-4 max-[800]:pt-2 max-[800px]:text-md">
         Pinned Projects & Blogs
       </h3>
-      <div className="gap-4 grid grid-cols-2 max-[800px]:flex overflow-scroll max-[800px]:w-screen my-2 max-[800px]:p-4">
+      <div className="gap-4 grid grid-cols-2 max-[800px]:flex overflow-x-auto max-[800px]:w-screen my-2 max-[800px]:p-4">
         {pinnedContent.map((item, idx) => (
           <div
             key={idx}

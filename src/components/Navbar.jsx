@@ -74,7 +74,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="w-full flex items-center justify-between overflow-x-scroll cursor-grab">
+    <nav className="w-full flex items-center justify-between">
       <ul className="flex items-center gap-4">
         {topics.map(({ name, icon, path, hiddenAt }) => {
           const isActive = pathname === path;

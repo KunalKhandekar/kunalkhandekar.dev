@@ -71,7 +71,7 @@ export default function ProjectContent({projectDetail}) {
         </div>
 
         {activeTab === "readme" ? (
-          <div className="prose dark:prose-invert max-w-none h-full p-6 ">
+          <div className="prose dark:prose-invert max-w-none h-full px-4">
             <ReadmeRenderer content={markdown} />
           </div>
         ) : (
