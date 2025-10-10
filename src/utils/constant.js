@@ -7,7 +7,7 @@ export const mainDescription =
   "🌱 Learning, building, and growing — one line of code at a time.";
 
 export const overviewReadmeContent = `<div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=F75C7E&center=true&vCenter=true&width=435&lines=Full-Stack+Developer;Learning+by+Building;Creating+User-Centric+Experiences;Dream.+Build.+Deploy.+Repeat." alt="Typing SVG" />
+  <img src="/images/readme-typing.svg" alt="Typing SVG" />
 </div>
 
 <h2 align="center">Welcome to My Digital Space</h2>
@@ -68,25 +68,25 @@ I enjoy building projects that solve meaningful problems — combining technical
     <tr>
       <td align="center">
         <a href="https://kunalkhandekar.dev" target="_blank">
-          <img src="https://img.icons8.com/fluency/96/domain.png" width="48" /><br/>
+          <img src="/images/www.png" width="48" /><br/>
           <sub><b>Portfolio</b></sub>
         </a>
       </td>
       <td align="center">
         <a href="mailto:kunalkhandekar.dev@gmail.com" target="_blank">
-          <img src="https://img.icons8.com/fluency/96/gmail-new.png" width="48" /><br/>
+          <img src="/images/gmail.png" width="48" /><br/>
           <sub><b>Email</b></sub>
         </a>
       </td>
       <td align="center">
         <a href="https://linkedin.com/in/sahil-khandekar-dev" target="_blank">
-          <img src="https://img.icons8.com/fluency/96/linkedin.png" width="48" /><br/>
+          <img src="/images/linkedin.png" width="48" /><br/>
           <sub><b>LinkedIn</b></sub>
         </a>
       </td>
       <td align="center">
         <a href="https://github.com/KunalKhandekar" target="_blank">
-          <img src="https://img.icons8.com/fluency/96/github.png" width="48" /><br/>
+          <img src="/images/github.png" width="48" /><br/>
           <sub><b>GitHub</b></sub>
         </a>
       </td>

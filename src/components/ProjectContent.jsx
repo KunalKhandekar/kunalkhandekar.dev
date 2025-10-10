@@ -30,7 +30,7 @@ export default function ProjectContent({projectDetail}) {
 
       <div className="border border-zinc-300 dark:border-zinc-600 rounded-lg max-[800px]:border-x-0 max-[800px]:rounded-none">
         {/* Tabs */}
-        <div className="p-3 pb-0 flex gap-2 border-b border-zinc-300 dark:border-zinc-600 sticky top-0 dark:bg-[#151B23] bg-zinc-100 rounded-t-lg z-[9999] max-[800px]:rounded-none">
+        <div className="p-3 pb-0 flex gap-2 border-b border-zinc-300 dark:border-zinc-600 sticky top-[45px] dark:bg-[#151B23] bg-zinc-100 rounded-t-lg z-[20] max-[800px]:rounded-none">
           <div
             className={`relative pb-1.5 ${
               activeTab === "readme"

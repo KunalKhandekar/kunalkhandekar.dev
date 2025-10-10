@@ -36,36 +36,36 @@ export const topics = [
     name: "achievements",
     icon: <GoRepoForked className="size-4" />,
     path: "/achievements",
-    hiddenAt: "max-[570px]:hidden",
-    blockAt: "max-[570px]:block",
+    hiddenAt: "max-[410px]:hidden",
+    blockAt: "max-[410px]:block",
   },
   {
     name: "experience",
     icon: <MdOutlineBadge className="size-4" />,
     path: "/experience",
-    hiddenAt: "max-[700px]:hidden",
-    blockAt: "max-[700px]:block",
+    hiddenAt: "max-[540px]:hidden",
+    blockAt: "max-[540px]:block",
   },
   {
     name: "blogs",
     icon: <MdOutlineArticle className="size-4" />,
     path: "/blogs",
-    hiddenAt: "max-[790px]:hidden",
-    blockAt: "max-[790px]:block",
+    hiddenAt: "max-[640px]:hidden",
+    blockAt: "max-[640px]:block",
   },
   {
     name: "consistency",
     icon: <FaRegHourglassHalf className="size-4" />,
     path: "/consistency",
-    hiddenAt: "max-[850px]:hidden",
-    blockAt: "max-[850px]:block",
+    hiddenAt: "max-[770px]:hidden",
+    blockAt: "max-[770px]:block",
   },
   {
     name: "contact",
     icon: <RiMessage2Line className="size-4" />,
     path: "/contact",
-    hiddenAt: "max-[900px]:hidden",
-    blockAt: "max-[900px]:block",
+    hiddenAt: "max-[890px]:hidden",
+    blockAt: "max-[890px]:block",
   },
 ];
 
@@ -108,12 +108,12 @@ export default function Navbar() {
           <button
             aria-haspopup="menu"
             aria-expanded={open}
-            className="min-[900px]:hidden flex items-center justify-center w-8 h-8 rounded border border-zinc-300 dark:border-zinc-600 dark:bg-[#212830] mb-2"
+            className="min-[890px]:hidden flex items-center justify-center w-8 h-8 rounded border border-zinc-300 dark:border-zinc-600 dark:bg-[#212830] mb-2"
           >
             <HiDotsHorizontal size={18} />
           </button>
         </PopoverTrigger>
-        <PopoverContent className="min-[900px]:hidden min-w-[140px] max-w-[200px]">
+        <PopoverContent className="min-[890px]:hidden min-w-[140px] max-w-[200px]">
           <ul className="flex flex-col gap-1">
             {topics.map(({ name, icon, path, blockAt }) => {
               const isActive = pathname === path;

@@ -67,7 +67,7 @@ export default function Header() {
       </div>
 
       {/* Sticky Navbar */}
-      <div className="sticky top-0 z-50 bg-[#F6F8FA] dark:bg-[#010409] border-b border-zinc-300 dark:border-zinc-600 px-3 pt-2">
+      <div className="sticky top-0 z-40 bg-[#F6F8FA] dark:bg-[#010409] border-b border-zinc-300 dark:border-zinc-600 px-3 pt-2">
         <Navbar />
       </div>
     </>
