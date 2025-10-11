@@ -125,7 +125,6 @@ export default function ContactForm() {
                 "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none " +
                 "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
                 "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
-                // focus ring: subtle green in light mode, white ring in dark mode for contrast
                 "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
               }
             />

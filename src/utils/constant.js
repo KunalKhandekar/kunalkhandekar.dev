@@ -190,16 +190,16 @@ export const projectDetails = [
     description:
       "TalkAtive is a dynamic real-time chat application built with the MERN stack, empowering users to connect and engage in seamless conversations. It offers a user-friendly interface, secure authentication, robust chat functionality, and real-time messaging through WebSockets. ",
     tags: [
-  { id: 1, topic: "real-time-chat" },
-  { id: 2, topic: "mern-stack" },
-  { id: 3, topic: "websockets" },
-  { id: 4, topic: "socket-io" },
-  { id: 5, topic: "authentication" },
-  { id: 6, topic: "media-sharing" },
-  { id: 7, topic: "react" },
-  { id: 8, topic: "expressjs" },
-  { id: 9, topic: "mongodb" },
-  { id: 10, topic: "zustand" },
+      { id: 1, topic: "real-time-chat" },
+      { id: 2, topic: "mern-stack" },
+      { id: 3, topic: "websockets" },
+      { id: 4, topic: "socket-io" },
+      { id: 5, topic: "authentication" },
+      { id: 6, topic: "media-sharing" },
+      { id: 7, topic: "react" },
+      { id: 8, topic: "expressjs" },
+      { id: 9, topic: "mongodb" },
+      { id: 10, topic: "zustand" },
     ],
     readmeContent: `# TalkAtive: Real-time Chat Web Application
 
@@ -247,31 +247,32 @@ export const projectDetails = [
 
 `,
     images: [
-  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Login.png",
-  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Register.png",
-  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Chat.png",
-  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Search.png",
-  "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Update.png",
-],
+      "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Login.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Register.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Chat.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Search.png",
+      "https://raw.githubusercontent.com/KunalKhandekar/TalkAtive/main/docs/Screenshots/Update.png",
+    ],
     gitHubLink: "https://github.com/KunalKhandekar/talkAtive",
     liveLink: "https://chat-talkative.vercel.app",
     developmentSummary: [
-  {
-    id: 1,
-    title: "Framework & Libraries",
-    value: "React (Vite) frontend; Node.js, Express.js backend",
-  },
-  {
-    id: 2,
-    title: "State & Realtime",
-    value: "Zustand for state management, Socket.IO for real-time communication",
-  },
-  {
-    id: 3,
-    title: "Database & Auth",
-    value: "MongoDB with Mongoose, JWT Authentication, Secure Cookies",
-  },
-],
+      {
+        id: 1,
+        title: "Framework & Libraries",
+        value: "React (Vite) frontend; Node.js, Express.js backend",
+      },
+      {
+        id: 2,
+        title: "State & Realtime",
+        value:
+          "Zustand for state management, Socket.IO for real-time communication",
+      },
+      {
+        id: 3,
+        title: "Database & Auth",
+        value: "MongoDB with Mongoose, JWT Authentication, Secure Cookies",
+      },
+    ],
     languagesUsed: [
       { name: "JavaScript", percent: 98.9, color: "bg-yellow-300" },
       { name: "Other", percent: 1.1, color: "bg-white" },
@@ -519,3 +520,37 @@ export const tweetIds = [
   "1967645650499285309",
   "1967499850435756251",
 ];
+
+// SEARCH
+  export const search = [
+    {
+      key: "Projects",
+      value: [
+        { id: 1, name: "Storage App", navLink: "/projects/Storage-App" },
+        { id: 2, name: "TalkAtive", navLink: "/projects/TalkAtive" },
+      ],
+    },
+    {
+      key: "Blogs",
+      value : [
+        {
+          id: 1,
+          name: "How to Actually Finish Your Side Projects: A Developer’s Guide to Going from Idea to Done",
+          navLink:
+            "https://medium.com/@kunalkhandekar.dev/how-to-actually-finish-your-side-projects-a-developers-guide-to-going-from-idea-to-done-abfdf2d4925f",
+        },
+      ],
+    },
+    {
+      key: "Pages",
+      value : [
+        { id: 1, name: "Overview", navLink: "/" },
+        { id: 2, name: "Projects", navLink: "/projects"},
+        { id: 3, name: "Achievements", navLink: "/achievements" },
+        { id: 4, name: "Experience",  navLink: "/experience" },
+        { id: 5, name: "Blogs", navLink: "/blogs" },
+        { id: 6, name: "Consistency", navLink: "/consistency" },
+        { id: 7, name: "Get in touch", navLink: "/contact" },
+      ],
+    },
+  ];

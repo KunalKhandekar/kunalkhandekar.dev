@@ -1,12 +1,11 @@
-import { BsSlashSquare } from "react-icons/bs";
 import { CiMenuFries } from "react-icons/ci";
-import { IoIosSearch } from "react-icons/io";
 import Avatar from "./lib/Avatar";
 import Button from "./lib/Button";
 import IconButton from "./lib/IconButton";
-import ThemeToggle from "./ThemeToggle";
 import Navbar from "./Navbar";
+import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
   return (
@@ -26,14 +25,7 @@ export default function Header() {
           </div>
           <div className="flex items-center justify-center gap-4 max-[700px]:gap-1.5">
             {/* Search Bar */}
-            <div
-              className={`pr-20 max-[700px]:pr-0 p-1.5 flex items-center justify-center rounded-md text-sm cursor-pointer border-zinc-300 border dark:border-zinc-600  text-zinc-700 dark:text-white select-none`}
-            >
-              <IoIosSearch className="size-5 mr-2" />
-              <span className="flex justify-center items-center max-[700px]:hidden">
-                Type <BsSlashSquare className="mx-2" /> to search
-              </span>
-            </div>
+            <SearchBar />
 
             <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300"></div>
 
