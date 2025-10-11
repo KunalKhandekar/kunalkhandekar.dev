@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, useMemo } from "react";
 import { IoIosSearch } from "react-icons/io";
 import Avatar from "./lib/Avatar";
 import { search } from "../utils/constant";
+import Link from "next/link";
 
 export default function SearchBar() {
   const inputRef = useRef(null);
@@ -139,7 +140,10 @@ export default function SearchBar() {
 
                       {value.map((item) => {
                         return (
-                          <div
+                          <Link
+                            href={item.navLink}
+                            target={key === "Blogs" ? "_blank" : ""}
+                            onClick={() => SetIsActive(false)}
                             className="flex justify-between items-center 
                                      hover:bg-zinc-100 dark:hover:bg-[#14171d] 
                                      py-2 px-2 rounded-md cursor-pointer 
@@ -172,7 +176,7 @@ export default function SearchBar() {
                                 ? "Read"
                                 : "Visit"}
                             </span>
-                          </div>
+                          </Link>
                         );
                       })}
                     </div>

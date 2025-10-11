@@ -32,12 +32,13 @@ export default function Header() {
             <div className="flex items-center justify-center gap-3 max-[700px]:gap-1.5">
               {/* Toggle Dark/Light */}
               <ThemeToggle />
+              
               {/* Change Language */}
-              <div>
+              {/* <div>
                 <IconButton tooltip="Switch Language">
                   <span className="transition-colors duration-100">EN</span>
                 </IconButton>
-              </div>
+              </div> */}
 
               {/* Side Bar */}
               <div className="flex gap-2">

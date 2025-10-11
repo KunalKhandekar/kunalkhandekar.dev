@@ -122,7 +122,8 @@ export default function Sidebar({ children }) {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-1">
+                {/* Multi - Language */}
+                {/* <div className="grid grid-cols-3 gap-1">
                   <button
                     onClick={() => setLanguage("English")}
                     className={`
@@ -162,7 +163,7 @@ export default function Sidebar({ children }) {
                   >
                     🇮🇳 मर
                   </button>
-                </div>
+                </div> */}
               </div>
 
               {/* Explore Section */}
