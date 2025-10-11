@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { FaRegHourglassHalf } from "react-icons/fa6";
 import { GoRepoForked } from "react-icons/go";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { IoBookOutline } from "react-icons/io5";
@@ -14,8 +15,6 @@ import {
   PopoverTrigger,
 } from "../components/lib/Popover";
 import Button from "./lib/Button";
-import { FaRegHourglassHalf } from "react-icons/fa6";
-import { FaPhone } from "react-icons/fa";
 
 export const topics = [
   {

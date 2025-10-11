@@ -1,5 +1,3 @@
-"use client";
-
 import { AchievementCard } from "../components/AchievementsCard";
 import ProfileBar from "../components/ProfileBar";
 import { achievements } from "../utils/constant";

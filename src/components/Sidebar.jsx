@@ -13,7 +13,7 @@ export default function Sidebar({ children }) {
   const pathname = usePathname();
   const { setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [language, setLanguage] = useState("English");
+  // const [language, setLanguage] = useState("English");
 
   useEffect(() => {
     if (isOpen) {

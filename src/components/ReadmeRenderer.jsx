@@ -1,24 +1,19 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import rehypeRaw from "rehype-raw";
 import ShadowDOM from "react-shadow";
+import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 
 export default function ReadmeRenderer({ content }) {
   const { theme } = useTheme();
   const [isMounted, setIsMounted] = useState(false);
-  const [cssLoaded, setCssLoaded] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
-  const handleCssLoad = () => {
-    setCssLoaded(true);
-  };
 
   if (!isMounted) {
     return (
@@ -38,7 +33,6 @@ export default function ReadmeRenderer({ content }) {
               ? "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css"
               : "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
           }
-          onLoad={handleCssLoad}
         />
         <style>{`
             .markdown-body pre {

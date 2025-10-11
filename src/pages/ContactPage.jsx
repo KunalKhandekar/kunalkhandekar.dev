@@ -1,5 +1,3 @@
-"use client";
-
 import ContactForm from "../components/ContactForm";
 import ProfileBar, { SocialLinks } from "../components/ProfileBar";
 

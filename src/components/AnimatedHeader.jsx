@@ -1,4 +1,3 @@
-"use client"
 const AnimatedHeader = () => {
   return (
     <div className="relative w-full bg-gradient-to-br from-gray-50 via-gray-100 to-white dark:from-[rgb(13,17,23)] dark:via-gray-900 dark:to-[#0D1117] overflow-hidden">

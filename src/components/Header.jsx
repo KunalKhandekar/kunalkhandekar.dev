@@ -1,7 +1,6 @@
 import { CiMenuFries } from "react-icons/ci";
 import Avatar from "./lib/Avatar";
 import Button from "./lib/Button";
-import IconButton from "./lib/IconButton";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
@@ -12,9 +11,9 @@ export default function Header() {
     <>
       <div className="flex flex-col gap-2 w-min-full bg-[#F6F8FA] text-zinc-700 dark:text-white dark:bg-[#010409]">
         <div className="flex items-center justify-between gap-2 p-3 pb-0">
-          <div className="flex items-center justify-center gap-2 ">
+          <div className="flex items-center justify-center gap-2">
             {/* Logo */}
-            <Avatar url={"https://github.com/evilrabbit.png"} />
+            <Avatar url={"/images/logo.png"} size="size-6 dark:invert-0 invert" />
 
             {/* Name */}
             <Button
@@ -32,7 +31,7 @@ export default function Header() {
             <div className="flex items-center justify-center gap-3 max-[700px]:gap-1.5">
               {/* Toggle Dark/Light */}
               <ThemeToggle />
-              
+
               {/* Change Language */}
               {/* <div>
                 <IconButton tooltip="Switch Language">
