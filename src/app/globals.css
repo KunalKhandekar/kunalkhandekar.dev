@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono);
 }
 
 .dark {
@@ -15,14 +17,15 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
-    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-  --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono",
-    Consolas, "Courier New", monospace;
 }
 
 body {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+code,
+pre {
+  font-family: var(--font-mono), monospace;
 }
 
 @keyframes fadeInUp {
@@ -51,7 +54,6 @@ body {
   padding-left: 30px;
   background-clip: padding-box;
 }
-
 
 /* SCROLL-BAR */
 

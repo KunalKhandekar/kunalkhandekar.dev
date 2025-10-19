@@ -8,7 +8,7 @@ function Avatar({ url, size = "size-9" }) {
 
   return (
     <div
-      className={`${size} rounded-full overflow-hidden cursor-pointer relative`}
+      className={`${size} rounded-full overflow-hidden cursor-pointer relative shrink-0`}
     >
       {/* Shimmer loader */}
       {isLoading && (

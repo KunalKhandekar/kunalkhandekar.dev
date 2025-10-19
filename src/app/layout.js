@@ -1,6 +1,20 @@
 import { ThemeProvider } from "next-themes";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import Header from "../components/Header.jsx";
 import "./globals.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata = {
   title: {
@@ -53,8 +67,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased dark:bg-[#0D1117] bg-white relative">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jetbrains.variable}`}>
+      <body className="font-sans antialiased dark:bg-[#0D1117] bg-white relative">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           {children}
