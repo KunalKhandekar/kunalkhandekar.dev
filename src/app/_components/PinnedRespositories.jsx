@@ -1,18 +1,17 @@
 import Link from "next/link";
 import { FaRegBookmark } from "react-icons/fa";
-import Publicbadge from "./Publicbadge";
+import Publicbadge from "../../components/Publicbadge";
 import { FaCubesStacked } from "react-icons/fa6";
 import { LuClock3 } from "react-icons/lu";
-import { pinnedContent } from "../utils/constant";
 
-export default function PinnedRespositories() {
+export default function PinnedRespositories({ content }) {
   return (
     <div className="py-4 max-[800]:my-4 my-2 dark:bg-[#0D1117] bg-white max-[800px]:border dark:border-zinc-800 border-zinc-300 max-[800px]:border-x-0">
       <h3 className="text-md max-[800]:px-4 max-[800]:pt-2 max-[800px]:text-md">
         Pinned Projects & Blogs
       </h3>
       <div className="gap-4 grid grid-cols-2 max-[800px]:flex overflow-x-auto max-[800px]:w-screen my-2 max-[800px]:p-4">
-        {pinnedContent.map((item, idx) => (
+        {content.map((item, idx) => (
           <div
             key={idx}
             className="border border-zinc-300 dark:border-zinc-600 rounded-lg p-4 max-[800px]:min-w-80 flex flex-col justify-between h-40"

@@ -42,7 +42,7 @@ export default function LanguageSelect({ languages, value, onValueChange }) {
                              hover:bg-zinc-100 dark:hover:bg-zinc-800
                              focus:bg-zinc-100 dark:focus:bg-zinc-800 focus:outline-none"
                 >
-                  <Select.ItemText>{lang.label}</Select.ItemText>
+                  <Select.ItemText>{lang.value}</Select.ItemText>
                   <Select.ItemIndicator className="absolute right-2">
                     <Check className="h-4 w-4 text-blue-500" />
                   </Select.ItemIndicator>

@@ -1,29 +1,29 @@
 const AnimatedHeader = () => {
   return (
     <div className="relative w-full bg-gradient-to-br from-gray-50 via-gray-100 to-white dark:from-[rgb(13,17,23)] dark:via-gray-900 dark:to-[#0D1117] overflow-hidden">
-
       <div className="absolute inset-0 opacity-20 dark:opacity-20">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.2),transparent_50%)] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(120,119,198,0.05)_50%,transparent_75%)] dark:bg-[linear-gradient(45deg,transparent_25%,rgba(120,119,198,0.1)_50%,transparent_75%)]" />
       </div>
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative min-h-[280px] sm:min-h-[320px] md:min-h-[240px] flex flex-col md:flex-row items-center justify-between py-8 md:py-12">
-
           <div className="flex-1 text-center md:text-left z-20 mb-8 md:mb-0">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 dark:from-blue-400 dark:via-purple-400 dark:to-cyan-400 bg-clip-text text-transparent">
                 My Consistency Journey
               </span>
               <br />
-              <span className="text-gray-900 dark:text-white">Learn in Public</span>
+              <span className="text-gray-900 dark:text-white">
+                Learn in Public
+              </span>
             </h1>
             <p className="text-gray-600 dark:text-gray-300 text-lg sm:text-xl md:text-xl max-w-2xl leading-relaxed">
-              Daily updates, small wins, experiments, and lessons — showing how consistent effort leads to growth.
+              Daily updates, small wins, experiments, and lessons — showing how
+              consistent effort leads to growth.
             </p>
           </div>
           <div className="relative flex-shrink-0 w-full md:w-auto md:ml-8">
             <div className="relative w-full max-w-md mx-auto md:w-80 h-48 md:h-56">
-           
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full shadow-lg shadow-purple-500/25 animate-pulse">
                 <div
                   className="absolute inset-2 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full animate-spin"
@@ -64,7 +64,13 @@ const AnimatedHeader = () => {
 
               <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-30">
                 <defs>
-                  <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <linearGradient
+                    id="lineGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
                     <stop offset="0%" stopColor="#8b5cf6" />
                     <stop offset="100%" stopColor="#06b6d4" />
                   </linearGradient>
@@ -106,10 +112,10 @@ const AnimatedHeader = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-14 bg-gradient-to-t from-white dark:from-[#0D1117] to-transparent" />
     </div>
-  )
-}
-export default AnimatedHeader
+  );
+};
+export default AnimatedHeader;

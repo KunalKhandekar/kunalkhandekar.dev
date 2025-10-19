@@ -1,31 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import React, { useMemo, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { RiStackLine } from "react-icons/ri";
-import Publicbadge from "../components/Publicbadge";
-import { IoGridOutline } from "react-icons/io5";
-import { FaListUl } from "react-icons/fa";
-import IconButton from "./lib/IconButton";
-import { useMemo, useState } from "react";
-import LanguageSelect from "./LanguageSelect";
-import React from "react";
-import Image from "next/image";
-import { languages, projectListings } from "../utils/constant";
+import Publicbadge from "../../../components/Publicbadge";
+import { SearchAndFilters } from "./SearchAndFilters";
 
-export default function ProjectSection() {
+export default function ProjectSection({ projectList, languages }) {
   const [view, setView] = useState("list");
-  const [selectedLang, setSelectedLang] = useState("all");
+  const [selectedLang, setSelectedLang] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredRepos = useMemo(() => {
-    return projectListings.filter(
+    return projectList?.filter(
       (proj) =>
-        (selectedLang === "all" || proj.languages.includes(selectedLang)) &&
+        (selectedLang === "All" || proj.languages.includes(selectedLang)) &&
         (proj.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           proj.description.toLowerCase().includes(searchTerm.toLowerCase()))
     );
-  }, [projectListings, selectedLang, searchTerm]);
+  }, [projectList, selectedLang, searchTerm]);
 
   return (
     <section className="flex-3 max-w-4xl max-[800px]:p-4 max-[800px]:dark:bg-[#0D1117] max-[800px]:bg-white max-[800px]:border-zinc-300 max-[800px]:border-y max-[800px]:dark:border-zinc-800">
@@ -40,7 +35,7 @@ export default function ProjectSection() {
         view={view}
       />
 
-      {filteredRepos.length === 0 ? (
+      {filteredRepos?.length === 0 ? (
         <div className="w-full">
           {/* Top info bar */}
           <div className="flex items-center justify-between text-sm text-zinc-500 dark:text-zinc-400 border-b border-zinc-300 dark:border-zinc-600 pb-2">
@@ -73,10 +68,10 @@ export default function ProjectSection() {
         </div>
       ) : (
         <React.Fragment>
-          {(searchTerm || selectedLang !== "all") && (
+          {(searchTerm || selectedLang !== "All") && (
             <div className="flex items-center justify-between text-sm text-zinc-500 dark:text-zinc-400 border-b border-zinc-300 dark:border-zinc-600 pb-2">
               <p>
-                {filteredRepos.length} results for repositories{" "}
+                {filteredRepos?.length} results for repositories{" "}
                 {searchTerm ? (
                   <>
                     <span>matching </span>
@@ -85,7 +80,7 @@ export default function ProjectSection() {
                     </span>
                   </>
                 ) : null}
-                {selectedLang !== "all" ? (
+                {selectedLang !== "All" ? (
                   <>
                     <span>written in </span>
                     <span className="font-medium text-zinc-700 dark:text-zinc-200">
@@ -99,7 +94,7 @@ export default function ProjectSection() {
               <button
                 onClick={() => {
                   setSearchTerm("");
-                  setSelectedLang("all");
+                  setSelectedLang("All");
                 }}
                 className="flex items-center gap-1 text-zinc-500 hover:text-zinc-700 dark:hover:text-zinc-300"
               >
@@ -126,7 +121,7 @@ export default function ProjectSection() {
 const ListLayout = ({ filteredRepos }) => {
   return (
     <div>
-      {filteredRepos.map((item, index) => (
+      {filteredRepos?.map((item, index) => (
         <div
           className="border-t border-zinc-300 dark:border-zinc-600 py-5 max-[800px]:min-w-80 flex flex-col justify-between"
           key={index}
@@ -192,19 +187,19 @@ const ListLayout = ({ filteredRepos }) => {
 const GridLayout = ({ filteredRepos }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-      {filteredRepos.map((item, index) => (
+      {filteredRepos?.map((item, index) => (
         <div
           className="bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-200 flex flex-col"
           key={index}
         >
           {/* Project Image */}
-          <div className="aspect-video bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
+          <div className="relative aspect-video bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
             <Image
               src={item.image}
               alt={item.title}
-              width={100}
-              height={100}
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-200"
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-200"
+              priority={index < 3}
             />
           </div>
 
@@ -261,55 +256,6 @@ const GridLayout = ({ filteredRepos }) => {
           </div>
         </div>
       ))}
-    </div>
-  );
-};
-
-const SearchAndFilters = ({
-  searchTerm,
-  setSearchTerm,
-  setView,
-  selectedLang,
-  setSelectedLang,
-  languages,
-  view,
-}) => {
-  return (
-    <div className="flex flex-wrap gap-3 pb-3 items-center justify-between">
-      {/* Search Input */}
-      <input
-        placeholder="Find a project..."
-        className="border border-zinc-300 dark:border-zinc-600 outline-none 
-               p-3 py-1 rounded-lg focus:outline-none focus:ring-1 
-               focus:ring-blue-500 focus:border-blue-500 
-               w-full sm:w-[60%] md:flex-1"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-
-      {/* Right Section (icons + select) */}
-      <div className="flex gap-2 items-center w-full sm:w-auto justify-end">
-        {/* View Toggle */}
-        <div className="flex items-center justify-center gap-1">
-          <IconButton tooltip={"Grid view"} onClick={() => setView("grid")}>
-            <IoGridOutline
-              className={`size-5 ${view === "grid" ? "text-blue-500" : ""}`}
-            />
-          </IconButton>
-          <IconButton tooltip={"List view"} onClick={() => setView("list")}>
-            <FaListUl
-              className={`size-5 ${view === "list" ? "text-blue-500" : ""}`}
-            />
-          </IconButton>
-        </div>
-
-        {/* Language Select */}
-        <LanguageSelect
-          value={selectedLang}
-          onValueChange={setSelectedLang}
-          languages={languages}
-        />
-      </div>
     </div>
   );
 };

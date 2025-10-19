@@ -1,6 +1,4 @@
-import { projectListings } from "../utils/constant";
-
-export default function sitemap() {
+export default async function sitemap() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
   // Static pages
@@ -28,7 +26,16 @@ export default function sitemap() {
     },
   ];
 
-  // Dynamic project pages
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin/projectsList`,
+    {
+      next: { revalidate: 60 },
+    }
+  );
+
+  const data = await res.json();
+  const projectListings = res.ok && data.success ? data.data : [];
+  
   const projectPages = projectListings.map((project) => ({
     url: `${baseUrl}/projects/${project.navLink}`,
   }));

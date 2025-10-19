@@ -7,8 +7,9 @@ export const metadata = {
     default: "Overview | Sahil Khandekar",
     template: "%s | Sahil Khandekar",
   },
-  description: "Personal portfolio of Sahil Khandekar — Full-stack developer crafting modern web applications and digital experiences.",
-   keywords: [
+  description:
+    "Personal portfolio of Sahil Khandekar — Full-stack developer crafting modern web applications and digital experiences.",
+  keywords: [
     "Sahil Portfolio",
     "Sahil Khandekar",
     "Web Developer",
@@ -27,7 +28,7 @@ export const metadata = {
       "Showcasing web development projects, UI/UX work, and technical skills of Sahil Khandekar.",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     siteName: "Sahil Portfolio",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -83,7 +83,7 @@ export default function ContactForm() {
       setIsSubmitting(true);
 
       // Replace with actual submit (fetch/axios)
-      console.log({ name, email, message });
+      // console.log({ name, email, message });
 
       // simulate network delay
       await new Promise((res) => setTimeout(res, 600));

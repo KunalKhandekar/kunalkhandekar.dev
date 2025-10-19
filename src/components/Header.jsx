@@ -1,6 +1,6 @@
-import { CiMenuFries } from "react-icons/ci";
-import Avatar from "./lib/Avatar";
-import Button from "./lib/Button";
+import { Menu } from "lucide-react";
+import Image from "next/image";
+import IconButton from "./lib/IconButton";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
@@ -13,51 +13,37 @@ export default function Header() {
         <div className="flex items-center justify-between gap-2 p-3 pb-0">
           <div className="flex items-center justify-center gap-2">
             {/* Logo */}
-            <Avatar url={"/images/logo.png"} size="size-6 dark:invert-0 invert" />
-
-            {/* Name */}
-            <Button
-              content="SahilKhandekar"
-              type="ghost"
-              classes="font-semibold max-[400px]:hidden"
+            <Image
+              alt="Logo"
+              src="/images/logo.png"
+              width={100}
+              height={100}
+              className="object-fill w-10 dark:invert-0 invert"
             />
+            {/* Name */}
+            <span className="font-semibold max-[400px]:hidden text-base pl-1.5">
+              Sahil Khandekar
+            </span>
           </div>
           <div className="flex items-center justify-center gap-4 max-[700px]:gap-1.5">
             {/* Search Bar */}
             <SearchBar />
-
-            <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300"></div>
-
+            <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300 "></div>
             <div className="flex items-center justify-center gap-3 max-[700px]:gap-1.5">
               {/* Toggle Dark/Light */}
               <ThemeToggle />
-
-              {/* Change Language */}
-              {/* <div>
-                <IconButton tooltip="Switch Language">
-                  <span className="transition-colors duration-100">EN</span>
-                </IconButton>
-              </div> */}
-
               {/* Side Bar */}
               <div className="flex gap-2">
                 <Sidebar>
-                  <Button
-                    content={
-                      <div className="flex gap-1 justify-center items-center group">
-                        <Avatar url={"/profile.jpg"} />
-                        <CiMenuFries className="size-6 dark:text-gray-500 dark:group-hover:text-white text-zinc-400 group-hover:text-zinc-700  transition-colors duration-100" />
-                      </div>
-                    }
-                    type="ghost"
-                  ></Button>
+                  <IconButton>
+                    <Menu className="size-5 transition-colors duration-100" />
+                  </IconButton>
                 </Sidebar>
               </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Sticky Navbar */}
       <div className="sticky top-0 z-40 bg-[#F6F8FA] dark:bg-[#010409] border-b border-zinc-300 dark:border-zinc-600 px-3 pt-2">
         <Navbar />

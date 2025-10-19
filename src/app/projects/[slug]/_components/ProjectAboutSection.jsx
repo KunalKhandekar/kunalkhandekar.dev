@@ -7,10 +7,10 @@ export const ProjectAboutSection = ({ projectDetail }) => {
       <h2 className="font-semibold">About</h2>
       <p>{projectDetail.description}</p>
       <div className="flex flex-wrap gap-2">
-        {projectDetail?.tags?.map(({ id, topic }) => {
+        {projectDetail?.tags?.map(({ _id, topic }) => {
           return (
             <span
-              key={id}
+              key={_id}
               className="px-3 py-1 rounded-full bg-blue-100 dark:bg-[#121D2F] text-blue-500 text-xs font-semibold 
            hover:bg-blue-500 hover:text-white"
             >
@@ -35,9 +35,9 @@ export const ProjectAboutSection = ({ projectDetail }) => {
 
       <div className="">
         <h2 className="font-semibold">Development Summary</h2>
-        {projectDetail.developmentSummary?.map(({ id, title, value }) => {
+        {projectDetail.developmentSummary?.map(({ _id, title, value }) => {
           return (
-            <div key={id} className="flex gap-2 items-start pt-2">
+            <div key={_id} className="flex gap-2 items-start pt-2">
               <FaCode className="mt-1 size-4 text-green-500" />
               <div className="flex flex-col">
                 <p className="text-sm">{title}</p>
@@ -57,8 +57,10 @@ export const ProjectAboutSection = ({ projectDetail }) => {
           {projectDetail.languagesUsed?.map((lang, i) => (
             <div
               key={i}
-              className={`${lang.color}`}
-              style={{ width: `${lang.percent}%` }}
+              style={{
+                width: `${lang.percent}%`,
+                backgroundColor: `${lang.color}`,
+              }}
             ></div>
           ))}
         </div>
@@ -67,7 +69,9 @@ export const ProjectAboutSection = ({ projectDetail }) => {
         <div className="flex flex-wrap gap-4 text-sm">
           {projectDetail.languagesUsed?.map((lang, i) => (
             <div key={i} className="flex items-center gap-2">
-              <span className={`h-3 w-3 rounded-full ${lang.color}`}></span>
+              <span className={`h-3 w-3 rounded-full`} style={{
+                backgroundColor: `${lang.color}`,
+              }}></span>
               <span>{lang.name}</span>
               <span className="text-sm text-[#858C95]">{lang.percent}%</span>
             </div>

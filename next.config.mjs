@@ -16,10 +16,14 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "*.githubusercontent.com"
-      }
+        hostname: "*.githubusercontent.com",
+      },
+      {
+        protocol: "https",
+        hostname: "dzdw2zccyu2wu.cloudfront.net",
+      },
     ],
-  }
+  },
 };
 
 export default nextConfig;

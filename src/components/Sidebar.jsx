@@ -7,13 +7,31 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import Avatar from "./lib/Avatar";
 import { topics } from "./Navbar";
-import { SocialLinks } from "./ProfileBar";
+import SocialLinks from "../components/SocialLinks";
 
 export default function Sidebar({ children }) {
   const pathname = usePathname();
   const { setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  // const [language, setLanguage] = useState("English");
+
+  const [profileData, setProfileData] = useState(null);
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      try {
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin/about`
+        );
+        const result = await res.json();
+        if (result.success) {
+          setProfileData(result.data);
+        }
+      } catch (err) {
+        console.error("Failed to fetch profile data", err);
+      }
+    };
+    fetchProfile();
+  }, []);
 
   useEffect(() => {
     if (isOpen) {
@@ -55,21 +73,23 @@ export default function Sidebar({ children }) {
             {/* Content */}
             <div className="h-full overflow-y-auto p-6 space-y-4">
               <div className="flex items-start gap-4 flex-col">
-                <Avatar url={"/profile.jpg"} size="size-24" />
+                <Avatar
+                  url={profileData.profilePic || "/profile.jpg"}
+                  size="size-24"
+                />
 
                 <div className="flex-1 min-w-0">
                   <h2 className="text-xl font-semibold text-gray-900 dark:text-[#f0f6fc]">
-                    Sahil Khandekar
+                    {profileData.name || "Sahil Khandekar"}
                   </h2>
                   <p className="text-sm text-gray-600 dark:text-[#8b949e]">
-                    Full Stack Developer
+                    {profileData.role}
                   </p>
                 </div>
               </div>
 
               <p className="text-xs text-gray-600 dark:text-[#8b949e] leading-relaxed mt-2">
-                Full-stack developer with a deep passion for computer science.
-                Currently working on cool web and mobile projects.
+                {profileData.description}
               </p>
 
               {/* Current activity */}
@@ -81,7 +101,7 @@ export default function Sidebar({ children }) {
                   </span>
                 </div>
                 <p className="text-xs text-gray-600 dark:text-[#8b949e]">
-                  Building a Personal Portfolio Website
+                  {profileData.currentFocus}
                 </p>
               </div>
 
@@ -121,49 +141,6 @@ export default function Sidebar({ children }) {
                     </span>
                   </div>
                 </div>
-
-                {/* Multi - Language */}
-                {/* <div className="grid grid-cols-3 gap-1">
-                  <button
-                    onClick={() => setLanguage("English")}
-                    className={`
-                      h-8 text-xs rounded-md border transition-colors
-                      ${
-                        language === "English"
-                          ? "bg-[#238636] text-white border-[#238636]"
-                          : "bg-white dark:bg-[#21262d] text-gray-700 dark:text-[#f0f6fc] border-gray-300 dark:border-[#30363d] hover:bg-gray-50 dark:hover:bg-[#30363d]"
-                      }
-                    `}
-                  >
-                    🇬🇧 EN
-                  </button>
-                  <button
-                    onClick={() => setLanguage("Hindi")}
-                    className={`
-                      h-8 text-xs rounded-md border transition-colors
-                      ${
-                        language === "Hindi"
-                          ? "bg-[#238636] text-white border-[#238636]"
-                          : "bg-white dark:bg-[#21262d] text-gray-700 dark:text-[#f0f6fc] border-gray-300 dark:border-[#30363d] hover:bg-gray-50 dark:hover:bg-[#30363d]"
-                      }
-                    `}
-                  >
-                    🇮🇳 हिं
-                  </button>
-                  <button
-                    onClick={() => setLanguage("Marathi")}
-                    className={`
-                      h-8 text-xs rounded-md border transition-colors
-                      ${
-                        language === "Marathi"
-                          ? "bg-[#238636] text-white border-[#238636]"
-                          : "bg-white dark:bg-[#21262d] text-gray-700 dark:text-[#f0f6fc] border-gray-300 dark:border-[#30363d] hover:bg-gray-50 dark:hover:bg-[#30363d]"
-                      }
-                    `}
-                  >
-                    🇮🇳 मर
-                  </button>
-                </div> */}
               </div>
 
               {/* Explore Section */}
@@ -204,14 +181,7 @@ export default function Sidebar({ children }) {
                   Skills
                 </h3>
                 <div className="flex flex-wrap gap-1">
-                  {[
-                    "React",
-                    "Node.js",
-                    "TypeScript",
-                    "Python",
-                    "MongoDB",
-                    "AWS",
-                  ].map((skill) => (
+                  {profileData.skills?.map((skill) => (
                     <span
                       key={skill}
                       className="text-xs bg-white dark:bg-[#21262d] text-gray-700 dark:text-[#f0f6fc] border border-gray-300 dark:border-[#30363d] px-2 py-1 rounded"
@@ -230,22 +200,6 @@ export default function Sidebar({ children }) {
                 <div className="space-y-1 flex flex-col text-sm">
                   <SocialLinks />
                 </div>
-              </div>
-
-              {/* Other Section */}
-              <div className="space-y-3">
-                <h3 className="text-sm font-medium text-gray-600 dark:text-[#8b949e]">
-                  Other
-                </h3>
-                <Link
-                  href="#"
-                  className="flex items-center gap-3 p-2 rounded-md hover:bg-gray-50 dark:hover:bg-[#21262d] transition-colors"
-                >
-                  <Info className="w-4 h-4 text-gray-700 dark:text-[#f0f6fc]" />
-                  <span className="text-sm text-gray-700 dark:text-[#f0f6fc]">
-                    About this Website
-                  </span>
-                </Link>
               </div>
             </div>
           </div>

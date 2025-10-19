@@ -4,7 +4,7 @@ import Masonry from "react-masonry-css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaXTwitter } from "react-icons/fa6";
-import Avatar from "./lib/Avatar";
+import Avatar from "../../../components/lib/Avatar";
 
 export default function MasonryGrid({ tweets }) {
   const breakpointColumnsObj = {

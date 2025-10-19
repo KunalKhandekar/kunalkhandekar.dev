@@ -2,11 +2,11 @@
 
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaCode } from "react-icons/fa6";
-import Button from "./lib/Button";
+import Button from "../../../../components/lib/Button";
 import { useState } from "react";
 import { IoBookOutline } from "react-icons/io5";
 import { RiScreenshotLine } from "react-icons/ri";
-import ReadmeRenderer from "./ReadmeRenderer";
+import ReadmeRenderer from "../../../../components/ReadmeRenderer";
 import ScreenshotLibrary from "./ScreenshotLibrary";
 import Link from "next/link";
 
