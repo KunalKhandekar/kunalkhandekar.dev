@@ -82,20 +82,29 @@ export default function ContactForm() {
     try {
       setIsSubmitting(true);
 
-      // Replace with actual submit (fetch/axios)
-      // console.log({ name, email, message });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin/contact-form`,
+        {
+          headers: {
+            "content-type": "application/json",
+          },
+          method: "POST",
+          body: JSON.stringify({ name, email, message }),
+        }
+      );
 
-      // simulate network delay
-      await new Promise((res) => setTimeout(res, 600));
+      const data = await res.json();
 
-      resetForm();
-      setIsSuccess(true);
+      if (data.success) {
+        resetForm();
+        setIsSuccess(true);
+      } else {
+        throw new Error(data.message || "Failed to send message");
+      }
 
-      // hide success after a short while
       setTimeout(() => setIsSuccess(false), 3000);
     } catch (err) {
       console.error("Submit error:", err);
-      // optional: set a global form error message in UI
     } finally {
       setIsSubmitting(false);
     }
@@ -125,7 +134,7 @@ export default function ContactForm() {
                 "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none " +
                 "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
                 "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
-                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+                "focus:ring-2 focus:ring-blue-700 focus:ring-offset-0"
               }
             />
             {errors.nameError && (
@@ -155,7 +164,7 @@ export default function ContactForm() {
                 "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none " +
                 "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
                 "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
-                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+                "focus:ring-2 focus:ring-blue-700 focus:ring-offset-0"
               }
             />
             {errors.emailError && (
@@ -187,7 +196,7 @@ export default function ContactForm() {
                 "w-full px-4 py-1.5 rounded-lg transition-shadow duration-150 outline-none resize-y " +
                 "bg-white dark:bg-zinc-950 text-gray-900 dark:text-gray-100 " +
                 "border border-gray-300 dark:border-zinc-700 placeholder-gray-500 dark:placeholder-gray-400 " +
-                "focus:ring-2 focus:ring-green-700 dark:focus:ring-white focus:ring-offset-0"
+                "focus:ring-2 focus:ring-blue-700 focus:ring-offset-0"
               }
             />
             {errors.messageError && (
