@@ -8,26 +8,46 @@ export const metadata = {
     template: "%s | Sahil Khandekar",
   },
   description:
-    "Personal portfolio of Sahil Khandekar — Full-stack developer crafting modern web applications and digital experiences.",
+    "Sahil Khandekar — Full-stack developer specializing in modern web applications, React, Node.js, and digital experiences.",
   keywords: [
-    "Sahil Portfolio",
     "Sahil Khandekar",
-    "Web Developer",
+    "Sahil Portfolio",
     "Full Stack Developer",
+    "Web Developer",
     "MERN Developer",
-    "Portfolio",
-    "Kunal Khandekar",
     "React Developer",
     "Node.js Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Software Engineer",
   ],
   authors: [{ name: "Sahil Khandekar" }],
   creator: "Sahil Khandekar",
+  publisher: "Sahil Khandekar",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL),
   openGraph: {
-    title: "Sahil Khandekar — Developer Portfolio",
+    title: "Sahil Khandekar — Full-stack Developer Portfolio",
     description:
-      "Showcasing web development projects, UI/UX work, and technical skills of Sahil Khandekar.",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      "Showcasing projects, skills, and experiences of Sahil Khandekar — crafting modern web applications using React, Node.js, and the MERN stack.",
     siteName: "Sahil Portfolio",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sahil Khandekar Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sahil Khandekar — Full-stack Developer Portfolio",
+    description:
+      "Discover projects and skills of Sahil Khandekar, a Full-stack web developer specializing in React, Node.js, and MERN stack apps.",
+    creator: "@_kunalkhandekar",
+    images: ["/opengraph-image.png"],
   },
 };
 

@@ -8,7 +8,7 @@ export function ProfileBarUI({ profileData }) {
     <div className="flex-1 max-[800px]:p-4 max-[800px]:dark:bg-[#0D1117] max-[800px]:bg-white max-[800px]:border-zinc-300 max-[800px]:border-b max-[800px]:dark:border-zinc-800">
       <div className="flex flex-col justify-center items-center p-3 pr-4 w-full max-[800px]:flex-row max-[800px]:gap-3 max-[800px]:p-0 max-[800px]:justify-start">
         <Avatar
-          url={profileData?.profilePic || "/profile.jpg"}
+          url={profileData?.profilePic || "/profile.jpeg"}
           size="size-72 max-[980px]:size-60 max-[800px]:size-24"
         />
         <div className="pt-4 max-[800px]:pt-0">

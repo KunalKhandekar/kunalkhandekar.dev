@@ -131,7 +131,7 @@ export default function SearchBar() {
                         <div className="flex items-center gap-2 w-full min-w-0">
                           <Avatar
                             size="size-5"
-                            url={item.avatar || "/profile.jpg"}
+                            url={item.avatar || "/profile.jpeg"}
                           />
                           <p className="truncate text-zinc-900 dark:text-zinc-100">
                             <span className="text-zinc-500 dark:text-zinc-400">

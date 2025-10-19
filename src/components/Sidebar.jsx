@@ -74,7 +74,7 @@ export default function Sidebar({ children }) {
             <div className="h-full overflow-y-auto p-6 space-y-4">
               <div className="flex items-start gap-4 flex-col">
                 <Avatar
-                  url={profileData.profilePic || "/profile.jpg"}
+                  url={profileData.profilePic || "/profile.jpeg"}
                   size="size-24"
                 />
 

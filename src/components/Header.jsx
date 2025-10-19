@@ -15,7 +15,7 @@ export default function Header() {
             {/* Logo */}
             <Image
               alt="Logo"
-              src="/images/logo.png"
+              src="/logo.png"
               width={100}
               height={100}
               className="object-fill w-10 dark:invert-0 invert"

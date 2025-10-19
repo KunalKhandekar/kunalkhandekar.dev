@@ -117,7 +117,7 @@ export default async function ProjectShowCase({ params }) {
         <div className="flex flex-row justify-between w-full items-center py-4 border-b border-zinc-300 dark:border-zinc-600 max-[800px]:border-none gap-y-2 max-[800px]:flex-col max-[800px]:items-start">
           {/* Left Section */}
           <div className="flex items-center justify-start gap-2 w-full">
-            <Avatar url={"/profile.jpg"} />
+            <Avatar url={"/profile.jpeg"} />
             <h2 className="font-bold text-xl max-[800px]:text-lg">
               {projectShowcaseContent?.name}
             </h2>
