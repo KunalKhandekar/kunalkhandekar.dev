@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaRegHourglassHalf } from "react-icons/fa6";
 import { GoRepoForked } from "react-icons/go";
 import { HiDotsHorizontal } from "react-icons/hi";
@@ -71,13 +71,18 @@ export const topics = [
 export default function Navbar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="w-full flex items-center justify-between">
       <ul className="flex items-center gap-4">
         {topics.map(({ name, icon, path, hiddenAt }) => {
-          const isActive = pathname === path;
-          console.log({ name, pathname, path, isActive });
+          // Only calculate isActive after component has mounted to avoid hydration mismatch
+          const isActive = mounted && pathname === path;
           return (
             <li
               key={name}
@@ -116,7 +121,7 @@ export default function Navbar() {
         <PopoverContent className="min-[890px]:hidden min-w-[140px] max-w-[200px]">
           <ul className="flex flex-col gap-1">
             {topics.map(({ name, icon, path, blockAt }) => {
-              const isActive = pathname === path;
+              const isActive = mounted && pathname === path;
               return (
                 <li
                   key={name}
