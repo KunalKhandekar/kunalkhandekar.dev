@@ -76,6 +76,7 @@ export default function Navbar() {
     <nav className="w-full flex items-center justify-between">
       <ul className="flex items-center gap-4">
         {topics.map(({ name, icon, path, hiddenAt }) => {
+          console.log(pathname);
           const isActive = pathname === path;
           return (
             <li
