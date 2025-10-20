@@ -23,7 +23,7 @@ export default function PinnedRespositories({ content }) {
                 target="_blank"
                 className="hover:underline text-blue-400 flex gap-1 items-center justify-start"
               >
-                <FaRegBookmark className="size-4 text-gray-500" />
+                <FaRegBookmark className="size-4 text-gray-500 shrink-0" />
                 <p className="font-semibold text-sm line-clamp-1">
                   {item.title}
                 </p>

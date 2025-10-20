@@ -21,7 +21,7 @@ export default function Header() {
               className="object-fill w-10 dark:invert-0 invert"
             />
             {/* Name */}
-            <span className="font-semibold max-[400px]:hidden text-base pl-1.5">
+            <span className="font-semibold max-[800px]:hidden text-base pl-1.5">
               Sahil Khandekar
             </span>
           </div>

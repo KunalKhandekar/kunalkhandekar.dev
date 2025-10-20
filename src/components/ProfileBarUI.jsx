@@ -16,7 +16,7 @@ export function ProfileBarUI({ profileData }) {
             <h3 className="font-semibold text-2xl max-[980px]:text-xl max-[800px]:text-lg">
               {profileData?.name || "Sahil Khandekar"}
             </h3>
-            <span className="font-thin text-lg max-[980px]:text-md max-[800px]:text-sm dark:text-zinc-200 text-zinc-950">
+            <span className="font-light text-lg max-[980px]:text-md max-[800px]:text-sm dark:text-zinc-200 text-zinc-950">
               {profileData?.role || "Full Stack Developer"}
             </span>
           </div>
