@@ -10,7 +10,7 @@ This portfolio is a representation of my personal brand as a developer. Built us
 
 > *"Learning, building, and growing — one project at a time."*
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/a4903b06-8d02-4a83-99f6-2a6e5d003b98" />
+<img width="1919" height="1079" alt="image" src="https://dzdw2zccyu2wu.cloudfront.net/github/portfolio.png" />
 
 
 ## Tech Stack
