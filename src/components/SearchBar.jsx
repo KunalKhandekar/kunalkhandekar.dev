@@ -5,33 +5,15 @@ import { IoIosSearch } from "react-icons/io";
 import Avatar from "./lib/Avatar";
 import Link from "next/link";
 
-export default function SearchBar() {
+export default function SearchBar({ initialData }) {
   const inputRef = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchData, setSearchData] = useState([]);
-
-  useEffect(() => {
-    const fetchSearchData = async () => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin/search`
-        );
-        const result = await res.json();
-        if (result.success) {
-          setSearchData(result.data);
-        }
-      } catch (err) {
-        console.error("Failed to fetch search data", err);
-      }
-    };
-    fetchSearchData();
-  }, []);
 
   const filteredSearch = useMemo(() => {
-    if (!searchTerm.trim()) return searchData;
+    if (!searchTerm.trim()) return initialData;
 
-    return searchData
+    return initialData
       .map(({ key, value }) => ({
         key,
         value: value.filter((item) =>
@@ -39,7 +21,7 @@ export default function SearchBar() {
         ),
       }))
       .filter(({ value }) => value.length > 0);
-  }, [searchTerm, searchData]);
+  }, [searchTerm, initialData]);
 
   useEffect(() => {
     const handleKey = (e) => {

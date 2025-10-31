@@ -2,8 +2,8 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import IconButton from "./lib/IconButton";
 import Navbar from "./Navbar";
-import SearchBar from "./SearchBar";
-import Sidebar from "./Sidebar";
+import SearchBarDataWrapper from "./SearchBarWrapper";
+import SidebarWrapper from "./SidebarWrapper";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Header() {
@@ -27,18 +27,18 @@ export default function Header() {
           </div>
           <div className="flex items-center justify-center gap-4 max-[700px]:gap-1.5">
             {/* Search Bar */}
-            <SearchBar />
+            <SearchBarDataWrapper />
             <div className="max-md:hidden w-px h-[25px] border dark:border-zinc-800 border-zinc-300 "></div>
             <div className="flex items-center justify-center gap-3 max-[700px]:gap-1.5">
               {/* Toggle Dark/Light */}
               <ThemeToggle />
               {/* Side Bar */}
               <div className="flex gap-2">
-                <Sidebar>
+                <SidebarWrapper>
                   <IconButton>
                     <Menu className="size-5 transition-colors duration-100" />
                   </IconButton>
-                </Sidebar>
+                </SidebarWrapper>
               </div>
             </div>
           </div>

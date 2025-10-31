@@ -1,37 +1,18 @@
 "use client";
 
-import { Activity, Info, Moon, Sun, X } from "lucide-react";
+import { Activity, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import SocialLinks from "../components/SocialLinks";
 import Avatar from "./lib/Avatar";
 import { topics } from "./Navbar";
-import SocialLinks from "../components/SocialLinks";
 
-export default function Sidebar({ children }) {
+export default function Sidebar({ children, profileData }) {
   const pathname = usePathname();
   const { setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-
-  const [profileData, setProfileData] = useState(null);
-
-  useEffect(() => {
-    const fetchProfile = async () => {
-      try {
-        const res = await fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/admin/about`
-        );
-        const result = await res.json();
-        if (result.success) {
-          setProfileData(result.data);
-        }
-      } catch (err) {
-        console.error("Failed to fetch profile data", err);
-      }
-    };
-    fetchProfile();
-  }, []);
 
   useEffect(() => {
     if (isOpen) {
